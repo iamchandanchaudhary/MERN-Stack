@@ -12,5 +12,8 @@ app.listen(port, () => {
 
 // Sending request
 app.use((req, res) => {
+    // console.log(req);
     console.log("Request recived");
+
+    res.send("This is a basic response!");
 })
