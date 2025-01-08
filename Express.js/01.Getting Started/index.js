@@ -15,5 +15,10 @@ app.use((req, res) => {
     // console.log(req);
     console.log("Request recived");
 
-    res.send("This is a basic response!");
+    // res.send("This is a basic response!");
+    res.send( {
+        name: "Chandan Chaudhary",
+        age: 18,
+        course: "BCA"
+    })
 })
