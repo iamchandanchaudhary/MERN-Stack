@@ -21,3 +21,8 @@ app.get("/help", (req, res) => {
 app.get("/account", (req, res) => {
     res.send("You Contacted account path.");
 });
+
+// What if path is wrong
+app.get("*", (req, res) => {
+    res.send("This path does not exist.")
+});
