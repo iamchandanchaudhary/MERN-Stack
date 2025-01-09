@@ -10,6 +10,7 @@ app.listen(port, () => {
     console.log(`app was listning on port: ${port}`);
 });
 
+// Routing is use to send a specific request based on specific path
 app.get("/", (req, res) => {
     res.send("You Contacted root path.");
 });
@@ -24,5 +25,9 @@ app.get("/account", (req, res) => {
 
 // What if path is wrong
 app.get("*", (req, res) => {
-    res.send("This path does not exist.")
+    res.send("This path does not exist.");
+});
+
+app.post("/", (req, res) => {
+    res.send("You send a Post request.");
 });
