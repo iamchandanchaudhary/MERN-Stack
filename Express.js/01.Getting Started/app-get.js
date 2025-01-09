@@ -11,13 +11,13 @@ app.listen(port, () => {
 });
 
 app.get("/", (req, res) => {
-    res.send("You Contacted root Directory.")
+    res.send("You Contacted root path.");
 });
 
 app.get("/help", (req, res) => {
-    res.send("You Contacted help Directory.")
+    res.send("You Contacted help path.");
 });
 
 app.get("/account", (req, res) => {
-    res.send("You Contacted account Directory.")
+    res.send("You Contacted account path.");
 });
