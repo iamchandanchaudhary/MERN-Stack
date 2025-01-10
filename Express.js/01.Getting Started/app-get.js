@@ -25,7 +25,7 @@ app.get("/account", (req, res) => {
 
 // What if path is wrong
 app.get("*", (req, res) => {
-    res.send("This path does not exist.");
+    res.send("This path doesn't exist.");
 });
 
 app.post("/", (req, res) => {
