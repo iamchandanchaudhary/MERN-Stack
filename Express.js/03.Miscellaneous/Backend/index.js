@@ -11,12 +11,17 @@ app.get("/", (req, res) => {
     res.send("Home Page");
 })
 
+// Get Request
 app.get("/register", (req, res) => {
     let { username, passward } = req.query;
     res.send(`<h3> This is a GET response. <br>Hello & Welcome ${ username }!</h3>`);
 })
 
+// Post Request
+app.use(express.urlencoded({ extended : true }));
+app.use(express.json());
+
 app.post("/register", (req, res) => {
-    // let { username, passward } = req.params;
-    res.send("<h1> This is a POST response. </h1>");
+    let { username, passward } = req.body;
+    res.send(`<h3> This is a POST response. <br>Hello & Welcome ${ username }!</h3>`);
 })
