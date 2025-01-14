@@ -18,5 +18,5 @@ app.get("/register", (req, res) => {
 
 app.post("/register", (req, res) => {
     // let { username, passward } = req.params;
-    res.send("<h1> This is a GET response. </h1>");
+    res.send("<h1> This is a POST response. </h1>");
 })
