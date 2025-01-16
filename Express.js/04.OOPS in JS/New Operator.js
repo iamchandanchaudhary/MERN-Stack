@@ -5,7 +5,7 @@
     }
 
     Student.prototype.talk = () => {
-        console.log(`Hello, my name is ${this.name}`);
+        return `Hello, my name is ${this.name}`;
     }
 
     let stu1 = new Student("Chandan", 18);
@@ -13,7 +13,7 @@
 
     console.log(stu1);
     console.log(stu2);
-    console.log(Student.prototype.talk.name);
+    console.log(stu1.talk());
 
     let comparision = (stu1.talk === stu2.talk);
     console.log("Comparision b/w same Function:", comparision);

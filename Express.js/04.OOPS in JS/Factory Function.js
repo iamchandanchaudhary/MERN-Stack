@@ -3,7 +3,7 @@ function studentInfo(name, age) {
         name: name,
         age: age,
         talk() {
-            console.log(`Hii, my name is ${this.name}`);
+            return `Hii, my name is ${this.name}`;
         },
     }
     return student;
