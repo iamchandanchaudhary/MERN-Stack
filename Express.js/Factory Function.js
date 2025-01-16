@@ -18,5 +18,5 @@ console.log(stu2);
 console.log(stu2.talk());
 
 // Disadvantage of Factory Function ==> Because it's creating another copy
-let comparision = stu1.talk === stu2.talk;
+let comparision = (stu1.talk === stu2.talk);
 console.log("Comparision b/w same Function:", comparision);

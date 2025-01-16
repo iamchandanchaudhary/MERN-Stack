@@ -4,11 +4,16 @@
         this.age = age
     }
 
-    Student.prototype.talk = () =>{
+    Student.prototype.talk = () => {
         console.log(`Hello, my name is ${this.name}`);
     }
 
     let stu1 = new Student("Chandan", 18);
+    let stu2 = new Student("Aman", 21);
 
     console.log(stu1);
-    console.log(stu1.talk());
+    console.log(stu2);
+    console.log(Student.prototype.talk.name);
+
+    let comparision = (stu1.talk === stu2.talk);
+    console.log("Comparision b/w same Function:", comparision);
