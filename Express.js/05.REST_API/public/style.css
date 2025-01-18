@@ -1,0 +1,22 @@
+h1 {
+    color: brown;
+}
+
+.post {
+    background-color: lightblue;
+}
+
+.username {
+    font-style: italic;
+}
+
+.new-post {
+    text-decoration: none;
+    background-color: antiquewhite;
+    color: rgb(45, 45, 45);
+    padding: 4px 8px;
+
+    border-radius: 10px;
+    border: 1px solid black;
+    font-weight: bold;
+}
