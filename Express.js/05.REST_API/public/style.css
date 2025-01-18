@@ -19,4 +19,9 @@ h1 {
     border-radius: 10px;
     border: 1px solid black;
     font-weight: bold;
+    margin-top: 10px;
+}
+
+.see-more {
+    text-decoration: none;
 }
