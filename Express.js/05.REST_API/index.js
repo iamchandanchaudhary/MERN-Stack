@@ -24,7 +24,7 @@ let posts = [ {
     content: "Hii, this is aman_agrawal.",
     },
     {
-    id: "3c",
+    id: uuidv4(),
     username: "vishal_verma",
     content: "Hello, my name is vishal.",
     }, 
@@ -52,7 +52,8 @@ app.get("/posts/new", (req, res) => {
 
 app.post("/posts", (req, res) => {
     let { username, content } = (req.body);
-    posts.push({ username, content });
+    let id = uuidv4();
+    posts.push({ id, username, content });
     // res.send("Post wirking properly.");
 
     res.redirect("/posts");
