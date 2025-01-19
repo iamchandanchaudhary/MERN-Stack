@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+const { v4: uuidv4 } = require('uuid');
+
 
 const port = 3015;
 
@@ -12,12 +14,12 @@ app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
 
 let posts = [ {
-    id: "1a",
+    id: uuidv4(), // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
     username: "chandan_chaudhary",
     content: "Hello, from chandan_chaudhary.",
     },
     {
-    id: "2b",
+    id: uuidv4(),
     username: "aman_agrawal",
     content: "Hii, this is aman_agrawal.",
     },
