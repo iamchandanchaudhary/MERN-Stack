@@ -34,11 +34,13 @@ app.listen(port, () => {
     console.log(`App was listen on Port: ${port}.`);
 })
 
+// ==> Home Page
 app.get("/", (req, res) => {
     let htmlCode = `<h2>Home Page.</h2> <br> <a href="http://localhost:3015/posts">See All Posts</a>`;
     res.send(htmlCode);
 })
 
+// ==> Viewing all post
 app.get("/posts", (req, res) => {
     let { id } = req.params;
     // let post = posts.find((p) => id === p.id);
@@ -46,10 +48,12 @@ app.get("/posts", (req, res) => {
     res.render("index.ejs", { posts });
 })
 
+// ==> New post page
 app.get("/posts/new", (req, res) => {
     res.render("newForm.ejs", { posts });
 })
 
+// ==> Adding new post
 app.post("/posts", (req, res) => {
     let { username, content } = (req.body);
     let id = uuidv4();
@@ -59,6 +63,7 @@ app.post("/posts", (req, res) => {
     res.redirect("/posts");
 })
 
+// ==> To view Specific Post
 app.get("/posts/:id", (req, res) => {
     let { id } = req.params;
     let post = posts.find((p) => id === p.id);
@@ -66,6 +71,18 @@ app.get("/posts/:id", (req, res) => {
     // res.send(`Request working properly <br> ${post.content}`);
 
     res.render("show.ejs", { post });
+})
+
+// ==> Patch Updating route
+app.patch("/posts/:id", (req, res) => {
+    let { id } = req.params;
+    let newContent = req.body.content;
+
+    let post = posts.find((p) => id === p.id);
+
+    post.content = newContent;
+    console.log(post);
+    res.send("Patch working properly");
 })
 
 app.get("/posts/:*", (req, res) => {
