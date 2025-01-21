@@ -22,6 +22,10 @@ h1 {
     margin-top: 10px;
 }
 
-.see-more {
+a {
     text-decoration: none;
+}
+
+.edit-btn {
+    margin-left: 20px;
 }

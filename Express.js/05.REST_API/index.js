@@ -73,7 +73,7 @@ app.get("/posts/:id", (req, res) => {
     res.render("show.ejs", { post });
 })
 
-// ==> Patch Updating route
+// ==> Patch - Updating route
 app.patch("/posts/:id", (req, res) => {
     let { id } = req.params;
     let newContent = req.body.content;
@@ -83,6 +83,13 @@ app.patch("/posts/:id", (req, res) => {
     post.content = newContent;
     console.log(post);
     res.send("Patch working properly");
+})
+
+app.get("/posts/:id/edit", (req, res) => {
+    let { id } = req.params;
+    let post = posts.find((p) => id === p.id);
+    res.render("edit.ejs", { post });
+
 })
 
 app.get("/posts/:*", (req, res) => {
