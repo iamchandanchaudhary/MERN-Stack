@@ -5,3 +5,5 @@ https://expressjs.com/
 https://ejs.co
 
 For unique id:- https://www.npmjs.com/package/uuid
+
+To send action in the form of (Patch, Put & Delete): https://www.npmjs.com/package/method-override
