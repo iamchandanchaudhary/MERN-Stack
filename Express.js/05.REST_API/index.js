@@ -95,6 +95,14 @@ app.get("/posts/:id/edit", (req, res) => {
 
 })
 
+app.delete("/posts/:id", (req, res) => {
+    let { id } = req.params;
+    posts = posts.filter((p) => id !== p.id);
+    // posts.pop(post);
+    // res.send("Delete Successfull");
+    res.redirect("/posts");
+})
+
 app.get("/posts/:*", (req, res) => {
     res.send("No such content found");
 })

@@ -2,7 +2,7 @@ h1 {
     color: brown;
 }
 
-.post {
+.post-details {
     background-color: lightblue;
 }
 
@@ -28,4 +28,11 @@ a {
 
 .edit-btn {
     margin-left: 20px;
+}
+
+.delete-btn {
+    background-color: transparent;
+    border: none;
+    /* margin-top: 10px; */
+    color: red;
 }
