@@ -29,7 +29,7 @@ let posts = [ {
     id: uuidv4(),
     username: "vishal_verma",
     content: "Hello, my name is vishal.",
-    }, 
+    },
 ];
 
 app.listen(port, () => {
@@ -83,11 +83,12 @@ app.patch("/posts/:id", (req, res) => {
     let post = posts.find((p) => id === p.id);
 
     post.content = newContent;
-    console.log(post);
+    // console.log(post);
     // res.send("Patch working properly");
     res.redirect("/posts");
 })
 
+// Patch -> Update the post
 app.get("/posts/:id/edit", (req, res) => {
     let { id } = req.params;
     let post = posts.find((p) => id === p.id);
@@ -95,10 +96,10 @@ app.get("/posts/:id/edit", (req, res) => {
 
 })
 
+// ==> Delete the post
 app.delete("/posts/:id", (req, res) => {
     let { id } = req.params;
     posts = posts.filter((p) => id !== p.id);
-    // posts.pop(post);
     // res.send("Delete Successfull");
     res.redirect("/posts");
 })
