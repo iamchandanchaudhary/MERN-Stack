@@ -1,14 +1,6 @@
-import './App.css'
-
-function Information() {
-  return (
-  <div>
-      <h1>Chandan Chaudhary</h1>
-      <p>Hello Everyone...</p>
-      <button>Click me!</button>
-  </div>
-  );
-}
+import './App.css';
+import Information from "./components/Information.jsx";
+// import { Information } from "./components/Information.jsx";
 
 function Title() {
   return (
@@ -27,4 +19,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
