@@ -1,0 +1,7 @@
+.Product {
+    border: 2px solid darkblue;
+    background-color: lightpink;
+
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
