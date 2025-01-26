@@ -11,11 +11,11 @@ function Title() {
 function App() {
 
   return ( 
-    <div>
+    <>
       <h1>This is my Custom Component.</h1>
       <Information/>
       <Title/>
-    </div>
+    </>
   );
 }
 
