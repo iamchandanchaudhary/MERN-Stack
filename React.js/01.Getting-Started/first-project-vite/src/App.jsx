@@ -3,6 +3,8 @@ import Information from "./components/Information.jsx";
 // import { Information } from "./components/Information.jsx";
 import Calculation from "./components/JSX with Curly Braces.jsx";
 
+import ProductTab from './components/ProductTab.jsx';
+
 function Title() {
   return (
     <p>This is another line.</p>
@@ -17,6 +19,9 @@ function App() {
       <Information/>
       <Title/>
       <Calculation/>
+
+      <ProductTab/>
+      <ProductTab/>
     </>
   );
 }
