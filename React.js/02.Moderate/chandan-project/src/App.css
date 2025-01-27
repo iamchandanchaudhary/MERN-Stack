@@ -40,3 +40,9 @@
 .read-the-docs {
   color: #888;
 }
+
+.component-box {
+  background-color: burlywood;
+  padding: 15px;
+  margin-bottom: 10px;
+}
