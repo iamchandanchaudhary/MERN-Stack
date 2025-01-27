@@ -38,8 +38,9 @@ app.listen(port, () => {
 
 // ==> Home Page
 app.get("/", (req, res) => {
-    let htmlCode = `<h2>Home Page.</h2> <br> <a href="http://localhost:3015/posts">See All Posts</a>`;
-    res.send(htmlCode);
+    // let htmlCode = `<h2>Home Page.</h2> <br> <a href="http://localhost:3015/posts">See All Posts</a>`;
+    // res.send(htmlCode);
+    res.render("Home.ejs");
 })
 
 // ==> Viewing all post

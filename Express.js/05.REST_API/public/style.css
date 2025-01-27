@@ -1,9 +1,30 @@
+* {
+    font-family: poppins;
+    margin: 0;
+    padding: 0;
+}
+
+.box-home {
+    height: 100vh;
+    width: 100vw;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 h1 {
     color: brown;
 }
 
 .post-details {
     background-color: lightblue;
+    /* margin-bottom: 20px; */
+    margin: 0 20px 20px 20px;
+    padding: 5px 10px;
+    /* width: fit-content; */
 }
 
 .username {
