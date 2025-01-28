@@ -3,6 +3,8 @@ import Product from './component/Product';
 
 function App() {
   let fruit2 = "Mango";
+
+  // Using arrays & objects
   let clr = ["Green, ", "Yellow, ", "Red"];
   let appleFtr = {a:"circlular", b:"big", c:"singular"};
   let mangoFtr = {a:"modrate", b:"small", c:"multiple"};
