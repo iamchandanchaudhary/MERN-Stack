@@ -1,4 +1,5 @@
 let styles = {backgroundColor : "darkblue", color: "white", padding: 10};
+let styles2 = {marginBottom: 10};
 
 function Information({name}) {
     return (
