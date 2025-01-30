@@ -1,5 +1,6 @@
 import './App.css';
 import Product from './component/Product';
+import Information from './component/Color';
 
 function App() {
   let fruit2 = "Mango";
@@ -10,11 +11,15 @@ function App() {
   let mangoFtr = {a:"modrate", b:"small", c:"multiple"};
   let grapesFtr = {a:"circlular", b:"small", c:"multiple"};
 
+  let name = "Chandan Chaudhary";
+
   return ( // Using Probs
     <> 
       <Product title="Apple" desc="A red sweet fruit" amount={15} feature={appleFtr} />
       <Product title={fruit2} desc="A yellow tasty fruit" amount={25} colors={clr} feature={mangoFtr} />
       <Product title="Grapes" desc="A green sweet fruit" amount={20} feature={grapesFtr} />
+
+      <Information name={name} />
     </>
   )
 }
