@@ -1,11 +1,11 @@
 import './App.css';
-import clickEvent from './component/clickEvent';
+import Button from './component/Button';
 
 function App() {
 
   return (
     <>
-      <clickEvent />
+      <Button />
     </>
   )
 }
