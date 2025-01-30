@@ -14,7 +14,7 @@ function handleDblClick() {
 function Button() {
     return ( // Click event & non-click event
         <div>
-            
+            <h2>Events in React</h2>
             <button onClick={handleClick}>Click me!</button>
             <p onMouseOver={handleNonClick}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur maiores illum adipisci repellat totam cupiditate animi recusandae nulla magni cum eum, incidunt iure? Dolor alias, voluptatem commodi reprehenderit repellat earum!</p>
             <button onDoubleClick={handleDblClick}>Click me!</button>
