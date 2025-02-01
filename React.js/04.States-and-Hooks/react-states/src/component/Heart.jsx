@@ -2,21 +2,22 @@
 
 import { useState } from "react";
 
-let styles = {color: "Red"};
-
 function Heart() {
+        let state = false;
         let [count, setCount] = useState(0);
+        let [isLike, setIsLike] = useState(state);
 
         let changeClr = () => {
+            setIsLike(!isLike);
             setCount(count + 1);
-            console.log(count);
+            // console.log(count);
         }
 
+        let styles = isLike ? {color: "Red"} : {color: ""};
+
     return (
-        <div onClick={changeClr}>
-            {count % 2 == 0 ? <i class="fa-solid fa-heart" style={styles}></i>
-            : 
-            <i class="fa-solid fa-heart"></i>}
+        <div >
+            <i className="fa-solid fa-heart" onClick={changeClr} style={styles}></i>
 
             <p>Heart Pressed: {count}</p>
         </div>
