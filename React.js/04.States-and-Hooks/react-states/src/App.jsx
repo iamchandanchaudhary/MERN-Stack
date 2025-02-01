@@ -1,5 +1,5 @@
 import './App.css';
-import Counter from './component/counter';
+import Counter from './component/Counter';
 import Heart from './component/heart';
 
 function App() {
