@@ -6,3 +6,5 @@ npm run start
 npm run build
 
 To install vite-react-project: https://vite.dev/guide/
+
+Tailwind + React: https://v3.tailwindcss.com/docs/guides/vite
