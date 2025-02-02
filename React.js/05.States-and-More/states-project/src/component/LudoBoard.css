@@ -1,0 +1,17 @@
+.full-box {
+    display: flex;
+    gap: 15px;
+}
+
+.ludo-board {
+    padding: 10px 20px;
+}
+
+.ludo-board-1 {
+    background-color: burlywood;
+}
+
+.ludo-board-2 {
+    background-color: lightblue;
+
+}
