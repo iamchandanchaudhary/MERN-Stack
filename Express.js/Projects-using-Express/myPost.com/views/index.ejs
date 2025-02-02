@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myPost</title>
+
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div>
+        <header>
+            <h1>myPost.com</h1>
+        </header>
+    
+        <div class="post-box">
+            <% for(post of posts) { %>
+                <div class="post-details">
+                    <h3 class="username"> @<%= post.username %> </h3>
+                    <p class="content"> <%= post.content %> </p>
+                    <a href="http://localhost:3015/posts/<%=post.id%>" class="see-more">See more</a>
+
+
+                        <div class="modify-tab">
+                            <a href="http://localhost:3015/posts/<%=post.id%>/edit" class="edit-btn">Edit</a>
+                            
+                            <form method="post" action="/posts/<%=post.id%>?_method=DELETE">
+                                <button type="submit" class="delete-btn">Delete</button>
+                            </form>
+
+                        </div>
+
+                </div>
+            <% } %>
+
+        </div>
+    
+        <br>
+
+            <div>
+                <a href="http://localhost:3015/posts/new" class="new-post"><i class="fa-solid fa-plus"></i></a>
+                
+            </div>
+        </div>
+</body>
+</html>
