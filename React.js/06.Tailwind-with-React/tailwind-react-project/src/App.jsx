@@ -4,7 +4,7 @@ function App() {
 
   return (
     <>
-      <p>Hello</p>
+      <p className='bg-gray-600 text-white text-2xl px-3 py-1 rounded'>Tailwind with React</p>
     </>
   )
 }
