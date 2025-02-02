@@ -11,8 +11,9 @@
 </head>
 <body>
     <div>
-        <header>
+        <header class="navbar">
             <h1>myPost.com</h1>
+            <!-- <a href="http://localhost:3015/posts/new" class="new-post"><i class="fa-solid fa-plus"></i></a> -->
         </header>
     
         <div class="post-box">
@@ -20,27 +21,28 @@
                 <div class="post-details">
                     <h3 class="username"> @<%= post.username %> </h3>
                     <p class="content"> <%= post.content %> </p>
-                    <a href="http://localhost:3015/posts/<%=post.id%>" class="see-more">See more</a>
+                    <a href="http://localhost:3015/posts/<%=post.id%>" class="see-more">Read more</a>
 
 
                         <div class="modify-tab">
-                            <a href="http://localhost:3015/posts/<%=post.id%>/edit" class="edit-btn">Edit</a>
+                            <a href="http://localhost:3015/posts/<%=post.id%>/edit" class="edit-btn"><i class="fa-solid fa-pen-to-square"></i></a>
                             
                             <form method="post" action="/posts/<%=post.id%>?_method=DELETE">
-                                <button type="submit" class="delete-btn">Delete</button>
+                                <button type="submit" class="delete-btn"><i class="fa-solid fa-trash-can"></i></button>
                             </form>
 
                         </div>
 
                 </div>
             <% } %>
+            <a href="http://localhost:3015/posts/new" class="new-post"><svg class="add-post-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/></svg></i></a>
 
         </div>
     
         <br>
 
             <div>
-                <a href="http://localhost:3015/posts/new" class="new-post"><i class="fa-solid fa-plus"></i></a>
+                
                 
             </div>
         </div>

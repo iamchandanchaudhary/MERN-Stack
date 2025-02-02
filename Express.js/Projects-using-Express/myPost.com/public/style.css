@@ -8,6 +8,15 @@ body {
     
 }
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 45px 10px 15px;
+    margin-bottom: 15px;
+
+    /* background-color: cadetblue; */
+}
+
 .box-home {
     height: 100vh;
     width: 100vw;
@@ -20,17 +29,19 @@ body {
 }
 
 h1 {
-    color: brown;
+    color: #5b39cc;
 }
 
 .post-box {
     display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
 }
 
 .post-details {
     width: 250px;
     height: 250px;
-    background-color: burlywood;
+    background-color: white;
     margin: 0 20px 20px 20px;
     padding: 5px 10px;
     border-radius: 8px;
@@ -39,6 +50,19 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    position: relative;
+
+    box-shadow: 1px 2px 20px 1px rgba(00, 00, 00, 0.25);
+
+    transition: all;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.username {
+    color: #5b39cc;
+    font-style: italic;
 }
 
 .post-details:hover {
@@ -47,30 +71,70 @@ h1 {
 }
 
 .username {
+    color: inherit;
     font-style: italic;
 }
 
 .modify-tab {
+    width: max-content;
     display: flex;
+    justify-content: space-between;
     position: absolute;
 
-    
+    /* margin-top: 20px; */
+    bottom: 10px;
+    gap: 25px;
 }
 
-.new-post {
+/* .new-post {
+    width: fit-content;
     text-decoration: none;
-    background-color: antiquewhite;
-    color: rgb(45, 45, 45);
-    padding: 4px 8px;
+    background-color: #5b39cc;
+    color: #fff;
+    padding: 14px;
 
     border-radius: 10px;
     border: 1px solid black;
     font-weight: bold;
-    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.new-post {
+    width: 250px;
+    height: 250px;
+    text-decoration: none;
+    background-color: #5b39cc;
+    color: #fff;
+    padding: 5px 10px;
+
+    border-radius: 8px;
+    border: 1px solid black;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 1px 2px 20px 1px rgba(00, 00, 00, 0.25);
+}
+
+.new-post:hover {
+    background-color: #6b4ada;
+}
+
+.add-post-icon {
+    fill: #fff;
+    padding: 100px;
+}
+
+.content {
+    text-align: center;
 }
 
 a {
     text-decoration: none;
+    color: inherit;
 }
 
 .edit-btn {
