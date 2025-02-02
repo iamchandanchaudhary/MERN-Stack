@@ -137,6 +137,11 @@ a {
     color: inherit;
 }
 
+.see-more {
+    color: gray;
+    font-size: 14px;
+}
+
 .edit-btn {
     margin-left: 20px;
 }
