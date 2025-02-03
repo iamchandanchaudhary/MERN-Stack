@@ -1,5 +1,5 @@
 import { useState } from "react";
-import './LudoBoard.css';
+import './Style.css';
 
 function LudoBoard() {
 
@@ -49,8 +49,12 @@ function LudoBoard() {
     }
 
     return (
+
+        <>
+
+        <h2>Objects & Array</h2>
         <div className="full-box">
-        
+
             <div className="ludo-board ludo-board-1">
                 <h3>Using multiple useState </h3>
 
@@ -84,6 +88,8 @@ function LudoBoard() {
             </div>
 
         </div>
+        
+        </>
     );
 }
 

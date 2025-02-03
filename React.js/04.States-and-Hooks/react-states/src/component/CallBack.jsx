@@ -5,6 +5,7 @@ function CallBack() {
     let [number, setNumber] = useState(0);  // Initialization
     console.log("Counter:", number);
 
+    // Implementing CallBack
     let count = () => {
         setNumber((currNum) => {
             return currNum + 1;
