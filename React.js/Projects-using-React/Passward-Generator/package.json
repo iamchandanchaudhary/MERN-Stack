@@ -1,5 +1,5 @@
 {
-  "name": "todo-app",
+  "name": "passward-generator",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,8 +11,7 @@
   },
   "dependencies": {
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "uuid": "^11.0.5"
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
