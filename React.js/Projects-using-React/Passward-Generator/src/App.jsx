@@ -1,10 +1,11 @@
 import './App.css';
+import PasswardGenerator from './components/PasswardGenerator';
 
 function App() {
 
   return (
     <>
-      <p>Hello</p>
+      <PasswardGenerator />
     </>
   )
 }
