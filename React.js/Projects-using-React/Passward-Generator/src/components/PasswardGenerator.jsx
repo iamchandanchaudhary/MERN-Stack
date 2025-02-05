@@ -1,9 +1,10 @@
-import { useState, useCallback } from "react";
+import { useState, useCallback, useEffect } from "react";
 
 function PasswardGenerator() {
 
     let [length, setLength] = useState(4);
     let [numberAllowed, setNumberAllowed] = useState(true);
+    let [alphaAllowed, setAlphaAllowed] = useState(false);
     let [charAllowed, setCharAllowed] = useState(false);
 
     let [passward, setPassward] = useState("");
@@ -11,23 +12,25 @@ function PasswardGenerator() {
     let generator = useCallback( () => {
         let pass = "";
         let str = "1234567890"
-        if(charAllowed) {
-            str+= "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
-        }
-        if(charAllowed) {
-            str+= "!@#$%^&*_-+={}[]`~"
-        }
+        if(alphaAllowed) str+= "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        
+        if(charAllowed) str+= "!@#$%^&*_-+={}[]`~"
+        
 
-        for(let i = 1; i <= array.length; i++) {
+        for(let i = 1; i <= length; i++) {
             let char = Math.floor(Math.random() * str.length + 1);
 
-            pass = str.charAt(char);
+            pass += str.charAt(char);
 
-            setPassward(pass);
         }
+        setPassward(pass);
 
-    }, [length, numberAllowed, charAllowed, setPassward]);
+    }, [length, numberAllowed, alphaAllowed, charAllowed, setPassward]);
 
+    useEffect(() => {
+    generator()
+    }, [length, numberAllowed, alphaAllowed, charAllowed, generator]);
+    
     return (
         <div className="h-screen w-full flex items-center flex-col text-white">
             <div className="w-max p-12 flex flex-col items-center bg-[#28403a] rounded-lg mt-5 shadow-xl">
@@ -36,7 +39,7 @@ function PasswardGenerator() {
 
                 {/* Inp area */}
                 <div className="">
-                    <input type="text" placeholder="passward" readOnly
+                    <input type="text" placeholder="passward" readOnly value={passward}
                     className="w-[350px] bg-white py-2 px-3 my-4 rounded-s-md border-y-[1.5px] border-s-[1.5px] border-black shadow-lg text-center outline-none" />
 
                     <button
@@ -53,8 +56,33 @@ function PasswardGenerator() {
                 </div>
 
                 {/* Select Option */}
-                <div>
-                    
+                <div className="">
+                    <input type="checkbox"
+                    defaultChecked={numberAllowed}
+                    id="numberInput"
+                    onChange={() => {
+                        setNumberAllowed((prev) => {!prev});
+                    }} />
+
+                    <label htmlFor="numberInput">123</label>
+
+                    <input type="checkbox"
+                    defaultChecked={alphaAllowed}
+                    id="alphaInput"
+                    onChange={() => {
+                        setAlphaAllowed((prev) => {!prev});
+                    }} />
+
+                    <label htmlFor="alphaInput">abc</label>
+
+                    <input type="checkbox"
+                    defaultChecked={charAllowed}
+                    id="charInput"
+                    onChange={() => {
+                        setCharAllowed((prev) => {!prev});
+                    }} />
+
+                    <label htmlFor="charInput">@&$</label>
                 </div>
 
             </div>
