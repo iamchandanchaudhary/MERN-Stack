@@ -10,6 +10,7 @@ function PasswordGenerator() {
 
     let [password, setPassword] = useState("");
 
+    
     let generator = useCallback( () => {
         let pass = "";
         let str = "";
@@ -44,8 +45,8 @@ function PasswordGenerator() {
     }, [length, numberAllowed, smallLetterAllowed, capitalLetterAllowed, charAllowed, generator]);
     
     return (
-        <div className="h-screen w-full flex items-center flex-col text-black">
-            <div className="w-max px-12 py-8 flex flex-col items-center bg-pink-100 rounded-lg mt-5 drop-shadow-[0_0px_60px_rgba(59,130,246,0.6)]">
+        <div className="h-screen w-full flex items-center justify-center flex-col text-black">
+            <div className="w-max px-12 py-8 flex flex-col items-center bg-pink-100 rounded-lg drop-shadow-[0_0px_30px_rgba(59,130,246,0.6)]">
                 <h1 className="text-5xl font-bold">Random Password Generator</h1>
                 <p className="my-4 text-base">Create strong and secure passwords to keep your account safe online.</p>
 
@@ -55,7 +56,7 @@ function PasswordGenerator() {
                     className="w-[350px] text-black bg-white py-2 px-3 my-4 rounded-s-md border-y-[1.5px] border-s-[1.5px] border-black shadow-lg text-center outline-none" />
 
                     <button
-                    className="bg-[#de2121] hover:bg-[#de2121] transition-all duration-150 ease-in-out text-[#fff] py-2 px-4 my-4 rounded-e-md border-y-[1.5px] border-e-[1.5px] border-black shadow-lg">Copy</button>
+                    className="bg-[#de2121] hover:bg-[#aa2929] transition-all duration-150 ease-in-out text-[#fff] py-2 px-4 my-4 rounded-e-md border-y-[1.5px] border-e-[1.5px] border-black shadow-lg">Copy</button>
                 </div>
 
                 {/* Range */}
@@ -63,7 +64,7 @@ function PasswordGenerator() {
                     <input type="range" min={4} max={30} value={length} 
                     className="cursor-pointer w-52 accent-[#de2121]"
                     onChange={ (e) => {setLength(e.target.value)}} />
-                    <label htmlFor="">Password Length: {length}</label>
+                    <label htmlFor="" className="text-lg">Password Length: {length}</label>
 
                 </div>
 
@@ -123,7 +124,7 @@ function PasswordGenerator() {
                     </div>
                 </div>
 
-                <button className="bg-[#de2121] text-white px-28 py-3 mt-8 rounded-lg">
+                <button className="bg-[#de2121] hover:bg-[#aa2929] text-white px-28 py-3 mt-8 rounded-lg">
                     Generate</button>
 
             </div>
