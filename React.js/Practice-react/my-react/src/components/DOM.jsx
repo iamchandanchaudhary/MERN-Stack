@@ -8,9 +8,11 @@ function DOM() {
         setIsSquare(!isSquare);
     }
 
+    let condition = isSquare ? "square" : "circle";
+
     return (
         <div className='main-box h-screen w-full flex items-center justify-center flex-col'>
-            <div className={isSquare ? "square" : "circle"}>
+            <div className={`w-52 h-52 border-2 border-black bg-pink-500 ${condition}`}>
 
             </div>
 
