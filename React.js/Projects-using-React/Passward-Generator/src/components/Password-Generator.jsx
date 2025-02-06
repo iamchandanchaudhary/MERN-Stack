@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 
 function PasswordGenerator() {
 
@@ -9,6 +9,9 @@ function PasswordGenerator() {
     let [charAllowed, setCharAllowed] = useState(false);
 
     let [password, setPassword] = useState("");
+
+    // useRef Hook
+    let passwardRef = useRef(null);
 
     
     let generator = useCallback( () => {
@@ -38,6 +41,11 @@ function PasswordGenerator() {
         
     }, [length, numberAllowed, smallLetterAllowed, capitalLetterAllowed, charAllowed, setPassword]);
 
+    let copyPassword = useCallback(() => {
+        passwardRef.current?.select();
+        passwardRef.current?.setSelectionRange(0, 31);
+        window.navigator.clipboard.writeText(password)
+    }, [password]);
     
     useEffect(() => {
     generator();
@@ -46,16 +54,17 @@ function PasswordGenerator() {
     
     return (
         <div className="h-screen w-full flex items-center justify-center flex-col text-black">
+
             <div className="w-max px-12 py-8 flex flex-col items-center bg-pink-100 rounded-lg drop-shadow-[0_0px_30px_rgba(59,130,246,0.6)]">
                 <h1 className="text-5xl font-bold">Random Password Generator</h1>
                 <p className="my-4 text-base">Create strong and secure passwords to keep your account safe online.</p>
 
                 {/* Inp area */}
                 <div className="">
-                    <input type="text" value={password} placeholder="password" readOnly 
+                    <input type="text" value={password} placeholder="password" readOnly ref={passwardRef}
                     className="w-[350px] text-black bg-white py-2 px-3 my-4 rounded-s-md border-y-[1.5px] border-s-[1.5px] border-black shadow-lg text-center outline-none" />
 
-                    <button
+                    <button onClick={copyPassword}
                     className="bg-[#de2121] hover:bg-[#aa2929] transition-all duration-150 ease-in-out text-[#fff] py-2 px-4 my-4 rounded-e-md border-y-[1.5px] border-e-[1.5px] border-black shadow-lg">Copy</button>
                 </div>
 
