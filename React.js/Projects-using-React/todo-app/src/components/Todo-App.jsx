@@ -36,6 +36,22 @@ function TodoApp() {
         )
     }
 
+    let upperCaseOne = (id) => {
+        setTodos(( ) => 
+            todos.map((todo) => {
+                if(todo.id === id) {
+                    return {
+                        ...todos,
+                        task: todo.task.toUpperCase(),
+                    }
+                }
+                else {
+                    return todo;
+                }
+            })
+        )
+    }
+
     return (
         <div className="h-screen w-full flex flex-col items-center justify-start">
             <div className="w-[450px] p-4">
@@ -60,12 +76,15 @@ function TodoApp() {
                             <span> {todo.task} </span>    
                             <button className="text-red-600 text-sm ml-4"
                             onClick={ () => { delTask(todo.id) }}>Delete</button>
+
+                            <button className="text-blue-600 text-sm ml-4"
+                            onClick={ () => { upperCaseOne(todo.id) }}>Update</button>
                             </li>
                         ))}
                     </ul>
                 </div>
 
-                <button onClick={upperCaseAll} className="ml-5 mt-5 rounded-lg bg-blue-500 hover:bg-blue-400 border-2 border-white focus:border-2 focus:border-blue-800 text-white px-3 py-1">Upper Case</button>
+                <button onClick={upperCaseAll} className="ml-5 mt-5 rounded-lg bg-blue-500 hover:bg-blue-400 border-2 border-white focus:border-2 focus:border-blue-800 text-white px-3 py-1">Upper Case All</button>
             </div>
         </div>
     );
