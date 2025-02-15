@@ -16,6 +16,15 @@ export default function LotteryTicket() {
 
     // setArrSum(sum(ticket));
 
+    // let check = () => {
+    //     if(isWinning) {
+    //         return "Congratulations, you won!";
+    //     }
+    //     else if(!isWinning) {
+    //         return "You Lost!";
+    //     }
+    // }
+
     return (
         <div className="w-full h-screen flex items-center justify-center flex-col">
             <div className="bg-blue-400 text-white w-max px-12 py-4 flex flex-col items-center gap-4 rounded-lg shadow-lg">
@@ -32,6 +41,7 @@ export default function LotteryTicket() {
                 onClick={generate}>Generate</button>
 
                 <p>{isWinning && "Congratulations, you won!"} {!isWinning && "You Lost!"}</p>
+                {/* <p>{check}</p> */}
 
             </div>
         </div>
