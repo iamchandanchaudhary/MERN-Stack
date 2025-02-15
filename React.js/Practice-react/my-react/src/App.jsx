@@ -6,7 +6,8 @@ function App() {
 
   return (
     <>
-      <DOM />
+      {/* <DOM /> */}
+      <Component />
     </>
   )
 }
