@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Component() {
+function Counter() {
 
     let [counter, setCounter] = useState(0);
 
@@ -11,9 +11,9 @@ function Component() {
     return (
         <div>
             <button onClick={click}
-            className="text-white bg-pink-600 py-1 px-2 rounded mt-4 ml-4">Counter + {counter}</button>
+            className="text-white bg-pink-600 py-1 px-2 rounded mt-4 ml-4">Counter+ {counter}</button>
         </div>
     );
 }
 
-export default Component;
+export default Counter;

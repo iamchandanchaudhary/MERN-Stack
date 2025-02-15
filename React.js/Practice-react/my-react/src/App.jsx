@@ -1,13 +1,13 @@
 import './App.css';
 import DOM from './components/DOM';
-import Component from './components/Component';
+import Counter from './components/Counter';
 
 function App() {
 
   return (
     <>
       {/* <DOM /> */}
-      <Component />
+      <Counter />
     </>
   )
 }
