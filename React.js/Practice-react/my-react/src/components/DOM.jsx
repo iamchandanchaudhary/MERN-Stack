@@ -17,7 +17,7 @@ function DOM() {
             </div>
 
             <button onClick={ changeShape }
-            className='bg-blue-500 text-white px-2 py-1 rounded-lg mt-4'>Change Shape</button>
+            className='bg-blue-500 text-white px-2 py-1 rounded-md mt-4'>Change Shape</button>
         </div>
     );
 }
