@@ -55,6 +55,7 @@ function LudoBoard() {
         <h2>Objects & Array</h2>
         <div className="full-box">
 
+            {/* Column 1 */}
             <div className="ludo-board ludo-board-1">
                 <h3>Using multiple useState </h3>
 
@@ -71,6 +72,7 @@ function LudoBoard() {
                 <button style={{backgroundColor: "yellow"}} onClick={yellowCounter}>+1</button>
             </div>
 
+            {/* Column 2 */}
             <div className="ludo-board ludo-board-2">
                 <h3>Using objects in useState </h3>
 
