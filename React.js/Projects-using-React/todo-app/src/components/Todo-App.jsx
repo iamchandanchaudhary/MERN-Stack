@@ -25,6 +25,12 @@ function TodoApp() {
         
     }
 
+    // All task Delete
+    let delTaskAll = (id) => {
+        setTodos((prevTodos) => todos.filter((prevTodos) =>  prevTodos.id == id ));
+    }
+
+    // All task uppercase
     let upperCaseAll = () => {
         setTodos(( ) => 
             todos.map((todo) => {
@@ -36,6 +42,7 @@ function TodoApp() {
         )
     }
 
+    // Singal task Uppercase
     let upperCaseOne = (id) => {
         setTodos(( ) => 
             todos.map((todo) => {
@@ -69,7 +76,7 @@ function TodoApp() {
                 </div>
 
                 <div>
-                    <h1 className="text-xl font-bold flex">Your Tasks:- </h1>
+                    <h1 className="text-xl font-bold text-center">Your Tasks:- </h1>
                     <ul className="ml-3 mt-2">
                         {todos.map((todo) => (
                             <li key={todo.id}>
@@ -78,13 +85,14 @@ function TodoApp() {
                             onClick={ () => { delTask(todo.id) }}>Delete</button>
 
                             <button className="text-blue-600 text-sm ml-4"
-                            onClick={ () => { upperCaseOne(todo.id) }}>Update</button>
+                            onClick={ () => { upperCaseOne(todo.id) }}>Upper case</button>
                             </li>
                         ))}
                     </ul>
                 </div>
 
                 <button onClick={upperCaseAll} className="ml-5 mt-5 rounded-lg bg-blue-500 hover:bg-blue-400 border-2 border-white focus:border-2 focus:border-blue-800 text-white px-3 py-1">Upper Case All</button>
+                <button onClick={delTaskAll} className="ml-5 mt-5 rounded-lg bg-blue-500 hover:bg-blue-400 border-2 border-white focus:border-2 focus:border-blue-800 text-white px-3 py-1">Delete All</button>
             </div>
         </div>
     );
