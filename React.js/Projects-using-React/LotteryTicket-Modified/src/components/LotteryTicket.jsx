@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { genTicket, sum } from "./Generator.js";
 import Ticket from "./Ticket.jsx";
+import Button from "./Button.jsx";
 
 export default function LotteryTicket({n = 3, winCondition}) {
 
     let [ticket, setTicket] = useState(genTicket(n));
 
     
-
     let isWinning = winCondition(ticket);
     let arrSum = sum(ticket);
 
@@ -24,10 +24,9 @@ export default function LotteryTicket({n = 3, winCondition}) {
 
             <p>Sum: {arrSum}</p>
 
-            <button className="border-2 border-blue-800 text-white bg-blue-400 rounded-md px-3 py-1"
-            onClick={buyTicket}>Buy Ticket</button>
+            <Button action={buyTicket} />
 
-            <p>{isWinning && "Congratulations, you won!"} {!isWinning && "You Lost, Try again!"}</p>
+            <p>{isWinning && "Congratulations, you won!"} {!isWinning && "You Lost, try again!"}</p>
         </div>
     );
 }
