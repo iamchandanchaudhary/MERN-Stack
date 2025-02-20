@@ -7,13 +7,13 @@ import { sum } from './components/Generator';
 function App() {
 
   let winCondition = (ticket) => {
-    // return sum(ticket) === 15;
+    return sum(ticket) === 15;
     // return ticket.every((num) => num === ticket[0]);
-    return ticket[0] === 0;
+    // return ticket[0] === 0;
   }
 
   return (
-    <div className='w-full h-screen flex items-center flex-col'>
+    <div className='w-full h-screen flex items-center justify-center flex-col'>
 
       <LotteryTicket n={3} winCondition={winCondition} />
 

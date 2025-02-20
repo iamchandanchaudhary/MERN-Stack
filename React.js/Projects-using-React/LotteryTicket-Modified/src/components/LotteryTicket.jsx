@@ -16,13 +16,13 @@ export default function LotteryTicket({n = 3, winCondition}) {
     } 
 
     return (
-        <div className="flex items-center flex-col gap-4">
+        <div className="flex items-center flex-col gap-4 bg-[#292d33] text-white px-24 py-8 rounded-lg">
             <h1 className="text-6xl font-bold">Lottery Ticket</h1>
             <div>
                 <Ticket ticket={ticket} />
             </div>
 
-            <p>Sum: {arrSum}</p>
+            <p className="text-2xl">Sum: {arrSum}</p>
 
             <Button action={buyTicket} />
 

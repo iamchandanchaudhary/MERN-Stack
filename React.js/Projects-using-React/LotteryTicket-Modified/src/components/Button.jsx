@@ -1,6 +1,6 @@
 export default function Button({action}) {
     return (
-        <button className="border-2 border-blue-800 text-white bg-blue-400 rounded-md px-3 py-1"
+        <button className="text-lg border-2 border-black text-[#292d33] bg-white rounded-md px-4 py-1"
             onClick={action}>Buy Ticket</button>
     );
 }
