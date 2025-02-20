@@ -2,32 +2,32 @@ import { useState } from "react";
 import { genTicket, sum } from "./Generator.js";
 import Ticket from "./Ticket.jsx";
 
-export default function LotteryTicket({n = 3, winningSum = 15}) {
+export default function LotteryTicket({n = 3, winCondition}) {
 
     let [ticket, setTicket] = useState(genTicket(n));
 
     
 
-    let isWinning = (sum(ticket) === winningSum);
-    // let arrSum = sum(ticket);
+    let isWinning = winCondition(ticket);
+    let arrSum = sum(ticket);
 
     let buyTicket = () => {
         setTicket(genTicket(n));
     } 
 
     return (
-        <div>
-            <h1>Lottery Ticket</h1>
+        <div className="flex items-center flex-col gap-4">
+            <h1 className="text-6xl font-bold">Lottery Ticket</h1>
             <div>
                 <Ticket ticket={ticket} />
             </div>
 
-            {/* <p>Sum: {arrSum}</p> */}
+            <p>Sum: {arrSum}</p>
 
-            <button className="border-[1px] border-black text-white bg-blue-400 rounded-md px-2"
+            <button className="border-2 border-blue-800 text-white bg-blue-400 rounded-md px-3 py-1"
             onClick={buyTicket}>Buy Ticket</button>
 
-            <p>{isWinning && "Congratulations, you won!"}</p>
+            <p>{isWinning && "Congratulations, you won!"} {!isWinning && "You Lost, Try again!"}</p>
         </div>
     );
 }

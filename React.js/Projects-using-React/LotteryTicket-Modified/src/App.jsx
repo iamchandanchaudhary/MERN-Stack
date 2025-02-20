@@ -2,13 +2,20 @@ import './App.css';
 import TicketNum from './components/TicketNum';
 import Ticket from './components/Ticket';
 import LotteryTicket from './components/LotteryTicket';
+import { sum } from './components/Generator';
 
 function App() {
+
+  let winCondition = (ticket) => {
+    // return sum(ticket) === 15;
+    // return ticket.every((num) => num === ticket[0]);
+    return ticket[0] === 0;
+  }
 
   return (
     <div className='w-full h-screen flex items-center flex-col'>
 
-      <LotteryTicket n={3} winningSum={15} />
+      <LotteryTicket n={3} winCondition={winCondition} />
 
       {/* <Ticket ticket={[1, 2, 3, 4, 5]} />
       <Ticket ticket={[1, 2, 3]} />
