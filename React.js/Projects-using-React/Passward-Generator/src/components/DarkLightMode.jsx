@@ -22,12 +22,6 @@ function DarkLightMode() {
     let condition1 = lightBtn ? "show" : "not-show";
     let condition2 = darkBtn ? "show" : "not-show";
 
-    // changeMode
-
-    // let modeChange = () => {
-    //     setDarkMode(!darkMode);
-    // } 
-
     let modeChange = darkMode ? "dark" : "";
 
     return (
