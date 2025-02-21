@@ -12,7 +12,7 @@ function DOM() {
 
     return (
         <div className='main-box h-screen w-full flex items-center justify-center flex-col'>
-            <div className={`w-52 h-52 border-2 border-black bg-pink-500 ${condition} transition-all duration-500 ease-linear`}>
+            <div className={`${condition} w-52 h-52 border-2 border-black bg-pink-500 transition-all duration-500 ease-linear`}>
 
             </div>
 

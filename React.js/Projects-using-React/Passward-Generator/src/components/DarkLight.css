@@ -1,10 +1,9 @@
 .show {
-    background-color: hotpink;
     display: flex;
+    visibility: visible;
 }
 
 .not-show {
-    background-color: green;
     display: hidden;
     visibility: hidden;
 }
