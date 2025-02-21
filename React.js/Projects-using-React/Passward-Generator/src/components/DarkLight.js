@@ -19,4 +19,4 @@ darkBtn.addEventListener("click", () => {
     html.classList.remove("dark");
 })
 
-console.log("Hello Chandan")
+console.log("Hello Chandan");

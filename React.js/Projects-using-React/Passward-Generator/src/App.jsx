@@ -5,9 +5,9 @@ import { useState } from 'react';
 
 function App() {
 
-    let [lightBtn, setLightBtn] = useState(true);
-    let [darkBtn, setDarkBtn] = useState(false);
-    let [darkMode, setDarkMode] = useState(false);
+    let [lightBtn, setLightBtn] = useState(false);
+    let [darkBtn, setDarkBtn] = useState(true);
+    let [darkMode, setDarkMode] = useState(true);
 
     let lightBtnChange = () => {
         setLightBtn(!lightBtn);
@@ -23,7 +23,6 @@ function App() {
 
   return (
     <main className={`${modeChange} h-screen w-full`}>
-      <div className={`h-screen w-full bg-pink-200 dark:bg-[#231557] dark:bg-gradient-to-l dark:from-[#231557] dark:to-[#140c30]`}>
         <PasswordGenerator />
         
         <div className={`absolute top-6 right-12 text-[#de2121] dark:text-white border-2 border-[#de2121] dark:border-white px-3 py-2 rounded-full`}>
@@ -37,8 +36,6 @@ function App() {
               <svg xmlns="http://www.w3.org/2000/svg" className="w-5 sm:w-6 feather feather-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
               </button>
         </div>
-
-      </div>
     </main>
 
   )

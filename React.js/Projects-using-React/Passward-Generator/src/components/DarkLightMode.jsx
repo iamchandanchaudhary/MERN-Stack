@@ -15,15 +15,16 @@ function DarkLightMode() {
         setDarkMode(!darkMode);
     }
 
+    
+    let condition1 = lightBtn ? "show" : "not-show";
+    let condition2 = darkBtn ? "show" : "not-show";
+    
+    let modeChange = darkMode ? "dark" : "";
+    
     let darkBtnChange = () => {
         setDarkBtn(!darkBtn);
     }
-
-    let condition1 = lightBtn ? "show" : "not-show";
-    let condition2 = darkBtn ? "show" : "not-show";
-
-    let modeChange = darkMode ? "dark" : "";
-
+    
     return (
         <div className={`${modeChange} absolute top-6 right-12 text-[#de2121] dark:text-white border-2 border-[#de2121] dark:border-white px-3 py-2 rounded-full`}>
             <button className={`light-btn hidden h-5 sm:h-6 w-max gap-2 ${condition1}`} onClick={lightBtnChange}
