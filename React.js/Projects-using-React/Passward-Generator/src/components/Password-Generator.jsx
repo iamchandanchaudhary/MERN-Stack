@@ -4,7 +4,7 @@ function PasswordGenerator() {
 
     let [length, setLength] = useState(4);
     let [numberAllowed, setNumberAllowed] = useState(true);
-    let [smallLetterAllowed, setSmallLetterAllowed] = useState(false);
+    let [smallLetterAllowed, setSmallLetterAllowed] = useState(true);
     let [capitalLetterAllowed, setCapitalLetterAllowed] = useState(false);
     let [charAllowed, setCharAllowed] = useState(false);
 
@@ -13,7 +13,7 @@ function PasswordGenerator() {
     // useRef Hook
     let passwardRef = useRef(null);
 
-    
+    // Generating the password
     let generator = useCallback( () => {
         let pass = "";
         let str = "";
@@ -41,11 +41,13 @@ function PasswordGenerator() {
         
     }, [length, numberAllowed, smallLetterAllowed, capitalLetterAllowed, charAllowed, setPassword]);
 
+    // Copy password
     let copyPassword = useCallback(() => {
         passwardRef.current?.select();
         passwardRef.current?.setSelectionRange(0, 31);
         window.navigator.clipboard.writeText(password)
     }, [password]);
+    
     
     useEffect(() => {
     generator();
@@ -53,10 +55,10 @@ function PasswordGenerator() {
     }, [length, numberAllowed, smallLetterAllowed, capitalLetterAllowed, charAllowed, generator]);
     
     return (
-        <div className="h-screen w-full flex items-center justify-center flex-col text-black dark:text-white bg-gradient-to-l bg-[#02aab0] from-[#00cdac] to-[#02aab0] dark:bg-gradient-to-l dark:bg-[#040917] dark:from-[#00002b] dark:to-[#040917]">
+        <div className="h-screen w-full flex items-center justify-center flex-col text-black dark:text-white bg-gradient-to-l bg-[#02aab0] from-[#00cdac] to-[#02aab0] dark:bg-gradient-to-l dark:bg-[#040917] dark:from-[#152737] dark:to-[#040917]">
 
             <div className="w-max px-12 py-8 flex flex-col items-center bg-[#fff] dark:bg-[#0a1338] rounded-lg drop-shadow-2xl groupdrop-shadow-[0_0px_30px_rgba(59,130,246,0.6)]">
-                <h1 className="text-5xl font-bold">Random Password Generator</h1>
+                <h1 className="text-5xl font-bold">Strong Password Generator</h1>
                 <p className="my-4 text-base">Create strong and secure passwords to keep your account safe online.</p>
 
                 {/* Inp area */}
@@ -133,7 +135,8 @@ function PasswordGenerator() {
                     </div>
                 </div>
 
-                <button className="bg-[#de2121] hover:bg-[#aa2929] text-white px-28 py-3 mt-8 rounded-lg">
+                <button onClick={generator}
+                className="bg-[#de2121] hover:bg-[#aa2929] text-white px-28 py-3 mt-8 rounded-lg">
                     Generate</button>
 
             </div>
