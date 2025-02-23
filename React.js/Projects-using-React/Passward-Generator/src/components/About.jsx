@@ -2,7 +2,7 @@ import "./About.css";
 
 function About() {
     return (
-        <section className="flex flex-col items-center w-max bg-green-200 dark:bg-[#0a1338] my-8 py-12 px-20 rounded-lg drop-shadow-lg">
+        <section className="flex flex-col items-center w-max bg-[#fff1e6] dark:bg-[#0a1338] my-8 py-12 px-20 rounded-lg drop-shadow-lg">
             <h1 className="text-4xl font-bold">What makes a password strong?</h1>
 
             <div className="flex mt-12 gap-8">

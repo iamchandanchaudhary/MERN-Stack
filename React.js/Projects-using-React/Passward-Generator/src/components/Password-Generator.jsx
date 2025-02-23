@@ -61,7 +61,7 @@ function PasswordGenerator() {
             <div className="absolute max-w-24 top-4 left-6">
                 <img src={logo} alt="" />
             </div>
-            <div className="w-max px-12 py-8 mt-28 flex flex-col items-center bg-[#fff] dark:bg-[#0a1338] rounded-lg drop-shadow-2xl groupdrop-shadow-[0_0px_30px_rgba(59,130,246,0.6)]">
+            <div className="w-max px-12 py-8 mt-28 flex flex-col items-center bg-[#fff1e6] dark:bg-[#0a1338] rounded-lg drop-shadow-2xl groupdrop-shadow-[0_0px_30px_rgba(59,130,246,0.6)]">
                 <h1 className="text-5xl font-bold">Strong Password Generator</h1>
                 <p className="my-4 text-base">Create strong and secure passwords to become a safe user online or offline.</p>
 
