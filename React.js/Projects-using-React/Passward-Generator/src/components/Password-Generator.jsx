@@ -71,13 +71,13 @@ function PasswordGenerator() {
                     className="w-[350px] text-black bg-white py-2 px-3 my-4 rounded-s-md border-y-[1.5px] border-s-[1.5px] border-black shadow-lg text-center outline-none" />
 
                     <button onClick={copyPassword}
-                    className="bg-[#de2121] hover:bg-[#aa2929] transition-all duration-150 ease-in-out text-[#fff] py-2 px-4 my-4 rounded-e-md border-y-[1.5px] border-e-[1.5px] border-black shadow-lg">Copy</button>
+                    className="bg-[#1848a1] hover:bg-[#182fa1] transition-all duration-150 ease-in-out text-[#fff] py-2 px-4 my-4 rounded-e-md border-y-[1.5px] border-e-[1.5px] border-black shadow-lg">Copy</button>
                 </div>
 
                 {/* Range */}
                 <div className="flex flex-col items-center gap-4 mt-4 p-2">
                     <input type="range" min={4} max={30} value={length} 
-                    className="cursor-pointer w-52 accent-[#de2121]"
+                    className="cursor-pointer w-52 accent-[#1848a1]"
                     onChange={ (e) => {setLength(e.target.value)}} />
                     <label htmlFor="" className="text-lg">Password Length: {length}</label>
 
@@ -91,7 +91,7 @@ function PasswordGenerator() {
                         <input type="checkbox"
                         defaultChecked={numberAllowed}
                         id="numberInput"
-                        className="w-6 h-6 accent-[#de2121] mr-2"
+                        className="w-6 h-6 accent-[#1848a1] mr-2"
                         onChange={() => {
                             setNumberAllowed((prev) => !prev);
                         }} />
@@ -104,7 +104,7 @@ function PasswordGenerator() {
                         <input type="checkbox"
                         defaultChecked={capitalLetterAllowed}
                         id="bigInput"
-                        className="w-6 h-6 accent-[#de2121] mr-2"
+                        className="w-6 h-6 accent-[#1848a1] mr-2"
                         onChange={() => {
                             setCapitalLetterAllowed((prev) => !prev);
                         }} />
@@ -117,7 +117,7 @@ function PasswordGenerator() {
                         <input type="checkbox"
                         defaultChecked={smallLetterAllowed}
                         id="smallInput"
-                        className="w-6 h-6 accent-[#de2121] mr-2"
+                        className="w-6 h-6 accent-[#1848a1] mr-2"
                         onChange={() => {
                             setSmallLetterAllowed((prev) => !prev);
                         }} />
@@ -130,7 +130,7 @@ function PasswordGenerator() {
                         <input type="checkbox"
                         defaultChecked={charAllowed}
                         id="charInput"
-                        className="w-6 h-6 accent-[#de2121] mr-2"
+                        className="w-6 h-6 accent-[#1848a1] mr-2"
                         onChange={() => {
                             setCharAllowed((prev) => !prev);
                         }} />
@@ -140,7 +140,7 @@ function PasswordGenerator() {
                 </div>
 
                 <button onClick={generator}
-                className="bg-[#de2121] hover:bg-[#aa2929] text-white px-28 py-3 mt-8 rounded-lg">
+                className="bg-[#1848a1] hover:bg-[#182fa1] text-white px-28 py-3 mt-8 rounded-lg">
                     Generate</button>
 
             </div>
