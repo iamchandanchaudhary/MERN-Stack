@@ -2,7 +2,7 @@ import './App.css';
 import PasswordGenerator from './components/Password-Generator';
 import DarkLightMode from './components/DarkLightMode';
 import { useState } from 'react';
-import About from './components/About';
+// import About from './components/About';
 
 function App() {
 
@@ -38,7 +38,7 @@ function App() {
               </button>
         </div>
 
-        <About />
+        {/* <About /> */}
     </main>
 
   )
