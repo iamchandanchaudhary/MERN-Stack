@@ -1,4 +1,5 @@
 import { useState, useCallback, useEffect, useRef } from "react";
+import logo from "./C2-Logo-White.png";
 
 function PasswordGenerator() {
 
@@ -56,7 +57,9 @@ function PasswordGenerator() {
     
     return (
         <div className="h-screen w-full flex items-center justify-center flex-col text-black dark:text-white bg-gradient-to-l bg-[#02aab0] from-[#00cdac] to-[#02aab0] dark:bg-gradient-to-l dark:bg-[#040917] dark:from-[#152737] dark:to-[#040917]">
-
+            <div className="absolute max-w-24 top-4 left-6">
+                <img src={logo} alt="" />
+            </div>
             <div className="w-max px-12 py-8 flex flex-col items-center bg-[#fff] dark:bg-[#0a1338] rounded-lg drop-shadow-2xl groupdrop-shadow-[0_0px_30px_rgba(59,130,246,0.6)]">
                 <h1 className="text-5xl font-bold">Strong Password Generator</h1>
                 <p className="my-4 text-base">Create strong and secure passwords to keep your account safe online.</p>
