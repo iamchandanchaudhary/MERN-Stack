@@ -2,14 +2,14 @@ import logo from "./C2-Logo-White.png";
 
 function Footer() {
     return (
-        <footer class="w-full bg-[#02b5af] shadow-sm dark:bg-gray-900">
+        <footer class="w-full bg-[#02b5af] shadow-sm dark:bg-gray-900 px-12">
 
-            <div class="w-full max-w-screen-xl mx-auto p-0">
+            <div class="w-full max-w-screen-xl mx-auto">
                 <div class="sm:flex sm:items-center sm:justify-between">
-                    <a href="#" class="flex items-center my-2">
-                        <img src={logo} class="h-20" alt="Flowbite Logo" />
+                    <a href="#" class="flex items-center my-1">
+                        <img src={logo} class="h-20" alt="Logo" />
                     </a>
-                    <ul class="flex flex-wrap items-center mb-0 text-sm font-medium text-gray-200 sm:mb-0 dark:text-gray-400">
+                    <ul class="flex flex-wrap items-center text-sm font-medium text-gray-100 dark:text-gray-400">
                         <li>
                             <a href="#" class="hover:underline me-4 md:me-6">About</a>
                         </li>
@@ -24,8 +24,8 @@ function Footer() {
                         </li>
                     </ul>
                 </div>
-                <hr class="my-0 lg:my-0 border-gray-100 sm:mx-auto dark:border-gray-700" />
-                <span class="block my-4 text-sm text-gray-200 sm:text-center dark:text-gray-400">© 2025 <a href="#" class="hover:underline">Chandan Chaudhary</a>. All Rights Reserved.</span>
+                <hr class="border-gray-100 dark:border-gray-700" />
+                <span class="block my-2 text-sm text-gray-200 sm:text-center dark:text-gray-400">© 2025 <a href="#" class="hover:underline">Chandan Chaudhary</a>. All Rights Reserved.</span>
             </div>
 
         </footer>
