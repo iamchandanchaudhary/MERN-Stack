@@ -2,6 +2,8 @@ import './App.css';
 import PasswordGenerator from './components/Password-Generator';
 import DarkLightMode from './components/DarkLightMode';
 import { useState } from 'react';
+import logo from "./components/C2-Logo-White.png";
+import About from './components/About';
 // import About from './components/About';
 
 function App() {
@@ -24,7 +26,14 @@ function App() {
 
   return (
     <main className={`${modeChange} h-screen w-full`}>
-        <PasswordGenerator />
+
+        <section className="h-max w-full flex items-center justify-center flex-col gap-12 text-black dark:text-white bg-gradient-to-l bg-[#02aab0] from-[#00cdac] to-[#02aab0] dark:bg-gradient-to-l dark:bg-[#040917] dark:from-[#152737] dark:to-[#040917]">
+
+        <div className="absolute max-w-24 top-4 left-6">
+            <img src={logo} alt="" />
+        </div>
+
+          <PasswordGenerator />
         
         <div className={`absolute top-6 right-12 text-[#1848a1] dark:text-white bg-[#fff1e6] dark:bg-transparent border-2 border-[#1848a1] dark:border-white px-3 py-2 rounded-full`}>
               <button className={`light-btn hidden h-5 sm:h-6 w-max gap-2 ${condition1}`} onClick={lightBtnChange}
@@ -39,6 +48,9 @@ function App() {
         </div>
 
         {/* <About /> */}
+
+          <About />
+        </section>
     </main>
 
   )
