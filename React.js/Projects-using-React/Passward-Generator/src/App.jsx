@@ -6,9 +6,9 @@ import { useState } from 'react';
 
 function App() {
 
-    let [lightBtn, setLightBtn] = useState(true);
-    let [darkBtn, setDarkBtn] = useState(false);
-    let [darkMode, setDarkMode] = useState(false);
+    let [lightBtn, setLightBtn] = useState(false);
+    let [darkBtn, setDarkBtn] = useState(true);
+    let [darkMode, setDarkMode] = useState(true);
 
     let lightBtnChange = () => {
         setLightBtn(!lightBtn);

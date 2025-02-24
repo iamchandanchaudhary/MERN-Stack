@@ -6,19 +6,19 @@ function About() {
             <h1 className="text-4xl font-bold">What makes a password strong?</h1>
 
             <div className="flex mt-12 gap-8">
-                <div className="max-w-72 bg-[#fff] dark:bg-gray-800 px-8 py-4 flex items-center justify-center flex-col gap-4 rounded-lg drop-shadow-lg">
+                <div className="max-w-72 bg-[#fff] hover:bg-[#1848a1] hover:text-[#fff] dark:bg-gray-800 dark:hover:bg-[#1848a1] px-8 py-4 flex items-center justify-center flex-col gap-4 rounded-lg drop-shadow-lg transition-all duration-500 ease-in-out">
                     <i class="fa-solid fa-key text-4xl"></i>
                     <p className="text-xl font-bold">Long</p>
                     <p className="text-center">The longer a password, the more secure it is. A strong password should be at least 10 characters long.</p>
                 </div>
 
-                <div className="max-w-72 bg-[#fff] dark:bg-gray-800 px-8 py-4 flex items-center justify-center flex-col gap-4 rounded-lg drop-shadow-lg">
+                <div className="max-w-72 bg-[#fff] hover:bg-[#1848a1] hover:text-[#fff] dark:bg-gray-800 dark:hover:bg-[#1848a1] px-8 py-4 flex items-center justify-center flex-col gap-4 rounded-lg drop-shadow-lg transition-all duration-500 ease-in-out">
                     <i class="fa-solid fa-lock text-4xl"></i>
                     <p className="text-xl font-bold">Complex</p>
                     <p className="text-center">Strong passwords use a combination of letters, numbers, cases, and symbols to form an unpredictable string of characters that doesn't resemble words or names.</p>
                 </div>
 
-                <div className="max-w-72 bg-[#fff] dark:bg-gray-800 px-8 py-4 flex items-center justify-center flex-col gap-4 rounded-lg drop-shadow-lg">
+                <div className="max-w-72 bg-[#fff] hover:bg-[#1848a1] hover:text-[#fff] dark:bg-gray-800 dark:hover:bg-[#1848a1] px-8 py-4 flex items-center justify-center flex-col gap-4 rounded-lg drop-shadow-lg transition-all duration-500 ease-in-out">
                     <i class="fa-solid fa-shield-halved text-4xl"></i>
                     <p className="text-xl font-bold">Unique</p>
                     <p className="text-center">A strong password should be unique to each account to reduce vulnerability in the event of a hack.</p>
