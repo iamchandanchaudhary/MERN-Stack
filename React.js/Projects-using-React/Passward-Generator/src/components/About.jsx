@@ -9,7 +9,7 @@ function About() {
                 <div className="max-w-72 bg-[#fff] hover:bg-[#1848a1] hover:text-[#fff] dark:bg-gray-800 dark:hover:bg-[#1848a1] px-8 py-4 flex items-center justify-center flex-col gap-4 rounded-lg drop-shadow-lg transition-all duration-500 ease-in-out">
                     <i class="fa-solid fa-key text-4xl"></i>
                     <p className="text-xl font-bold">Long</p>
-                    <p className="text-center">While length is crucial, combining it with complexity (uppercase and lowercase letters, numbers, and symbols) further strengthens your password.</p>
+                    <p className="text-center">While length is crucial, combining it with complexity (uppercase and lowercase, numbers, and symbols) further strengthens your password.</p>
                 </div>
 
                 <div className="max-w-72 bg-[#fff] hover:bg-[#1848a1] hover:text-[#fff] dark:bg-gray-800 dark:hover:bg-[#1848a1] px-8 py-4 flex items-center justify-center flex-col gap-4 rounded-lg drop-shadow-lg transition-all duration-500 ease-in-out">
