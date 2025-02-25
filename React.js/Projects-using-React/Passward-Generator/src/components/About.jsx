@@ -9,13 +9,13 @@ function About() {
                 <div className="max-w-72 bg-[#fff] hover:bg-[#1848a1] hover:text-[#fff] dark:bg-gray-800 dark:hover:bg-[#1848a1] px-8 py-4 flex items-center justify-center flex-col gap-4 rounded-lg drop-shadow-lg transition-all duration-500 ease-in-out">
                     <i class="fa-solid fa-key text-4xl"></i>
                     <p className="text-xl font-bold">Long</p>
-                    <p className="text-center">The longer a password, the more secure it is. A strong password should be at least 10 characters long.</p>
+                    <p className="text-center">While length is crucial, combining it with complexity (uppercase and lowercase letters, numbers, and symbols) further strengthens your password.</p>
                 </div>
 
                 <div className="max-w-72 bg-[#fff] hover:bg-[#1848a1] hover:text-[#fff] dark:bg-gray-800 dark:hover:bg-[#1848a1] px-8 py-4 flex items-center justify-center flex-col gap-4 rounded-lg drop-shadow-lg transition-all duration-500 ease-in-out">
                     <i class="fa-solid fa-lock text-4xl"></i>
                     <p className="text-xl font-bold">Complex</p>
-                    <p className="text-center">Strong passwords use a combination of letters, numbers, cases, and symbols to form an unpredictable string of characters that doesn't resemble words or names.</p>
+                    <p className="text-center">Mixing characters makes patterns unpredictable, They add layers of difficulty, protecting your accounts.</p>
                 </div>
 
                 <div className="max-w-72 bg-[#fff] hover:bg-[#1848a1] hover:text-[#fff] dark:bg-gray-800 dark:hover:bg-[#1848a1] px-8 py-4 flex items-center justify-center flex-col gap-4 rounded-lg drop-shadow-lg transition-all duration-500 ease-in-out">
