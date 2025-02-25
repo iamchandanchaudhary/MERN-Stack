@@ -5,6 +5,7 @@ import { useState } from 'react';
 import logo from "./components/C2-Logo-White.png";
 import About from './components/About';
 import Footer from './components/footer';
+import Animation from './animation/animation';
 
 function App() {
 
@@ -28,6 +29,8 @@ function App() {
     <main className={`${modeChange} h-screen w-full`}>
 
         <section className="h-max w-full flex items-center justify-center flex-col gap-12 text-black dark:text-white bg-gradient-to-l bg-[#02aab0] from-[#00cdac] to-[#02aab0] dark:bg-gradient-to-l dark:bg-[#040917] dark:from-[#152737] dark:to-[#040917]">
+
+          {/* <Animation /> */}
 
             <div className="absolute max-w-24 top-4 left-6">
                 <img src={logo} alt="" />
