@@ -30,7 +30,7 @@ function App() {
 
         <section className="h-max w-full flex items-center justify-center flex-col gap-12 text-black dark:text-white bg-gradient-to-l bg-[#02aab0] from-[#00cdac] to-[#02aab0] dark:bg-gradient-to-l dark:bg-[#040917] dark:from-[#152737] dark:to-[#040917]">
 
-          <Animation />
+          {/* <Animation /> */}
 
             <div className="absolute max-w-24 top-4 left-6">
                 <img src={logo} alt="" />
