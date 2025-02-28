@@ -2,10 +2,12 @@ import './App.css';
 import PasswordGenerator from './components/Password-Generator';
 import DarkLightMode from './components/DarkLightMode';
 import { useState } from 'react';
-import logo from "./components/C2-Logo-White.png";
 import About from './components/About';
 import Footer from './components/footer';
 import Animation from './animation/animation';
+
+import logo from "./components/C2-Logo-White.png";
+import logo2 from "./components/Chandan-Logo-White.png";
 
 function App() {
 
