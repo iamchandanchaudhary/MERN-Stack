@@ -20,3 +20,6 @@ const studentSchema = new mongoose.Schema({
   city: String,
   rollno: Number
 });
+
+const Student = mongoose.model("Student", studentSchema);
+const User = mongoose.model("User", studentSchema);
