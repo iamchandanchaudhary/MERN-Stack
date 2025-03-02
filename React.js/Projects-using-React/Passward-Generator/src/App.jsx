@@ -6,8 +6,8 @@ import About from './components/About';
 import Footer from './components/footer';
 import Animation from './animation/animation';
 
-import logo from "./components/C2-Logo-White.png";
-import logo2 from "./components/Chandan-Logo-White.png";
+import logo from "./assets/C2-Logo-White.png";
+// import logo2 from "../src/assets/Chandan-Logo-White.png";
 
 function App() {
 
