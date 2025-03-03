@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "mongoose": "^8.11.0"
+  },
+  "name": "practice",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Chandan Chaudhary",
+  "license": "ISC",
+  "description": ""
+}
