@@ -10,8 +10,6 @@ main()
 
 async function main() {
   await mongoose.connect('mongodb://127.0.0.1:27017/college');
-
-  // use `await mongoose.connect('mongodb://user:password@127.0.0.1:27017/test');` if your database has auth enabled
 }
 
 const studentSchema = new mongoose.Schema({
@@ -22,4 +20,13 @@ const studentSchema = new mongoose.Schema({
 });
 
 const Student = mongoose.model("Student", studentSchema);
-const User = mongoose.model("User", studentSchema);
+// const User = mongoose.model("User", studentSchema);
+
+const stu1 = new Student({
+  name: "Chandan Chaudhary",
+  age: 18,
+  city: "Basti",
+  rollno: 230010,
+})
+
+stu1.save();
