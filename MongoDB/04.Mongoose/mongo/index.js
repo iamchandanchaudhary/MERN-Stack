@@ -27,6 +27,18 @@ const stu1 = new Student({
   age: 18,
   city: "Basti",
   rollno: 230010,
-})
+});
 
 stu1.save();
+
+const stu2 = new Student({
+  name: "Sneha Chaudhary",
+  age: 13,
+  city: "Basti",
+  rollno: 230012,
+});
+
+stu2
+  .save()
+  .then((res) => console.log(res))
+  .catch((err) => console.log(err));
