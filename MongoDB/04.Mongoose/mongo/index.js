@@ -40,5 +40,5 @@ const stu2 = new Student({
 
 stu2
   .save()
-  .then((res) => console.log(res))
+  .then((data) => console.log(data))
   .catch((err) => console.log(err));
