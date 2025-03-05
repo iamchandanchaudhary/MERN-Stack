@@ -1,11 +1,13 @@
 import './App.css';
 import Counter from './components/Counter';
+import ChatBot from './components/Element';
 
 function App() {
 
   return (
     <>
-      <Counter />
+      {/* <Counter /> */}
+      <ChatBot />
     </>
   )
 }
