@@ -1,6 +1,11 @@
 import ChatBotIcon from "./ElementIcon";
+import ChatForm from "./ElementForm";
+import { useState } from "react";
 
 function ChatBot() {
+
+    const [chatHistory, setChatHistory] = useState();
+
     return (
         <div className="container font-[poppins]">
             <div className="chatbot-popup relative w-[420px] overflow-hidden bg-[#fff] rounded-lg shadow-lg">
@@ -35,12 +40,7 @@ function ChatBot() {
 
                 {/* Chat footer */}
                 <div className="chat-footer absolute bottom-0 w-[100%] pt-4 px-6 pb-5 ">
-                    <form action="#" className="chat-form flex items-center bg-[#fff] outline-[1px] outline-dashed outline-[#cccce5] rounded-2xl drop-shadow-lg  focus-within:outline-[2px] focus-within:outline-[#6d4fc2] focus-within:outline-double">
-                        <input type="text" className="massage-input border-none outline-none bg-none h-12 w-[100%] px-4 text-[16px] rounded-2xl " placeholder="massage..." required />
-
-                        <button className="material-symbols-outlined h-9 w-9 cursor-pointer text-[20px] text-[#fff] flex-shrink-0 mr-2 rounded-full bg-[#6d4fc2] hover:bg-[#593bab] transition-all duration-200 ease-in-out ">keyboard_arrow_up</button>
-
-                    </form>
+                    <ChatForm setChatHistory={setChatHistory} />
                 </div>
             </div>
         </div>
