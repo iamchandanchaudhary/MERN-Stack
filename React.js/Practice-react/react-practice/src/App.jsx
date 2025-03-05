@@ -1,6 +1,6 @@
 import './App.css';
 import Counter from './components/Counter';
-import ChatBot from './components/Element';
+import ChatBot from './components/ChatBot';
 
 function App() {
 

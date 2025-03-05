@@ -1,5 +1,6 @@
-import ChatBotIcon from "./ElementIcon";
-import ChatForm from "./ElementForm";
+import ChatBotIcon from "./ChatBotIcon";
+import ChatForm from "./ChatForm";
+import ChatMassage from "./ChatMassage";
 import { useState } from "react";
 
 function ChatBot() {
@@ -31,11 +32,10 @@ function ChatBot() {
                         </p>
                     </div>
 
-                    <div className="massage user-massage flex gap-3 flex-col items-end">
-                        <p className="massage-text px-4 py-3 max-w-[75%] text-[15px] bg-[#6d4fc2] text-[#fff] rounded-s-xl rounded-tr-xl rounded-br-sm">
-                            Lorem ipsum dolor sit amet.
-                        </p>
-                    </div>
+                    {/* Render the chat history */}
+                    {chatHistory.map((chat, index) => (
+                        <ChatMassage key={index} chat={chat} />
+                    ))}
                 </div>
 
                 {/* Chat footer */}

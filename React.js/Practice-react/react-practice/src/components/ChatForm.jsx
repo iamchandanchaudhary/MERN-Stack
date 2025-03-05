@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-function ChatForm() {
+function ChatForm({setChatHistory}) {
 
     const inputRef = useRef();
 
@@ -12,7 +12,8 @@ function ChatForm() {
         if(!userMassage) return;
         inputRef.current.value = "";
 
-        console.log(userMassage)
+        // Update chat history with the user's massage
+        setChatHistory(history => [...history, { role: "user", text: userMassage }]);
     }
 
     return (
