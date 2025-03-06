@@ -55,7 +55,7 @@ function PasswordGenerator() {
     }, [length, numberAllowed, smallLetterAllowed, capitalLetterAllowed, charAllowed, generator]);
     
     return (
-            <div className="w-max px-8 md:px-12 py-8 mt-28 flex flex-col items-center bg-[#fff1e6] dark:bg-[#0a1338] rounded-lg drop-shadow-2xl z-10 groupdrop-shadow-[0_0px_30px_rgba(59,130,246,0.6)]">
+            <div className="w-[90vw] sm:w-[70vw] px-8 md:px-12 py-8 mt-28 flex flex-col items-center bg-[#fff1e6] dark:bg-[#0a1338] rounded-lg drop-shadow-2xl z-10 groupdrop-shadow-[0_0px_30px_rgba(59,130,246,0.6)]">
                 <h1 className="text-3xl md:text-5xl font-bold">Strong Password Generator</h1>
                 <p className="my-4 text-sm md:text-base flex-wrap">Create strong and secure passwords to become a safe user online or offline.</p>
 
