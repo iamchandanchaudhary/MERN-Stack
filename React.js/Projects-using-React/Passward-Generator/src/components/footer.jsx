@@ -9,7 +9,7 @@ function Footer() {
                     <a href="#" class="flex items-center my-1">
                         <img src={logo} class="h-20" alt="Logo" />
                     </a>
-                    <ul class="flex flex-wrap items-center text-sm font-medium text-gray-100 dark:text-gray-400">
+                    <ul class="flex flex-wrap items-center text-sm font-medium text-gray-100 dark:text-gray-400 py-3">
                         <li>
                             <a href="#" class="hover:underline me-4 md:me-6">About</a>
                         </li>
