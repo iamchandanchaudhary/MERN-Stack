@@ -55,14 +55,14 @@ function PasswordGenerator() {
     }, [length, numberAllowed, smallLetterAllowed, capitalLetterAllowed, charAllowed, generator]);
     
     return (
-            <div className="w-max px-6 md:px-12 py-8 mt-28 flex flex-col items-center bg-[#fff1e6] dark:bg-[#0a1338] rounded-lg drop-shadow-2xl z-10 groupdrop-shadow-[0_0px_30px_rgba(59,130,246,0.6)]">
+            <div className="w-max px-8 md:px-12 py-8 mt-28 flex flex-col items-center bg-[#fff1e6] dark:bg-[#0a1338] rounded-lg drop-shadow-2xl z-10 groupdrop-shadow-[0_0px_30px_rgba(59,130,246,0.6)]">
                 <h1 className="text-3xl md:text-5xl font-bold">Strong Password Generator</h1>
-                <p className="my-4 text-sm sm:text-base">Create strong and secure passwords to become a safe user online or offline.</p>
+                <p className="my-4 text-sm md:text-base flex-wrap">Create strong and secure passwords to become a safe user online or offline.</p>
 
                 {/* Inp area */}
                 <div className="">
                     <input type="text" value={password} placeholder="password" readOnly ref={passwardRef}
-                    className="w-[350px] text-black bg-white py-2 px-3 my-4 rounded-s-md border-y-[1.5px] border-s-[1.5px] border-black shadow-lg text-center outline-none" />
+                    className="w-[250px] md:w-[350px] text-black bg-white py-2 px-3 my-4 rounded-s-md border-y-[1.5px] border-s-[1.5px] border-black shadow-lg text-center outline-none" />
 
                     <button onClick={copyPassword}
                     className="bg-[#1848a1] hover:bg-[#182fa1] transition-all duration-150 ease-in-out text-[#fff] py-2 px-4 my-4 rounded-e-md border-y-[1.5px] border-e-[1.5px] border-black shadow-lg">Copy</button>
@@ -78,7 +78,7 @@ function PasswordGenerator() {
                 </div>
 
                 {/* Select Option */}
-                <div className="w-full flex gap-10 md:gap-20 items-center justify-center mt-6">
+                <div className="w-full flex flex-wrap gap-7 md:gap-20 items-center justify-center mt-6 text-sm md:text-base">
 
                     {/* Number */}
                     <div className="flex items-center">
@@ -133,8 +133,9 @@ function PasswordGenerator() {
                     </div>
                 </div>
 
+                {/* Generate Button */}
                 <button onClick={generator}
-                className="bg-[#1848a1] hover:bg-[#182fa1] text-white px-28 py-3 mt-8 rounded-lg">
+                className="bg-[#1848a1] hover:bg-[#182fa1] text-white px-20 md:px-28 py-3 mt-8 rounded-lg">
                     Generate</button>
 
             </div>
