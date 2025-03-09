@@ -3,6 +3,8 @@ import ChatForm from "./ChatForm";
 import ChatMassage from "./ChatMassage";
 import { useState } from "react";
 
+import './style.css';
+
 function ChatBot() {
 
     const [chatHistory, setChatHistory] = useState([]);
