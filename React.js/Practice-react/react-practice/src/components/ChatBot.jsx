@@ -5,7 +5,7 @@ import { useState } from "react";
 
 function ChatBot() {
 
-    const [chatHistory, setChatHistory] = useState();
+    const [chatHistory, setChatHistory] = useState([]);
 
     return (
         <div className="container font-[poppins]">

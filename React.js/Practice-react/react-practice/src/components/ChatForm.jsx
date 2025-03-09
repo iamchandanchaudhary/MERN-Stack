@@ -14,7 +14,10 @@ function ChatForm({setChatHistory}) {
 
         // Update chat history with the user's massage
         setChatHistory(history => [...history, { role: "user", text: userMassage }]);
-    }
+
+        // Add a "thinking..." placeholder for bot response
+        setTimeout(() => setChatHistory((history) => [...history, { role: "model", text: "thinking..." }]), 600);
+    };
 
     return (
         <form action="#" onSubmit={handleFormSubmit}
