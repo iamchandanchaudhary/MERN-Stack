@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-function ChatForm({setChatHistory}) {
+function ChatForm({chatHistory, setChatHistory, generateBotResponse}) {
 
     const inputRef = useRef();
 
@@ -15,8 +15,16 @@ function ChatForm({setChatHistory}) {
         // Update chat history with the user's massage
         setChatHistory((history) => [...history, { role: "user", text: userMassage }]);
 
-        // Add a "thinking..." placeholder for bot response
-        setTimeout(() => setChatHistory((history) => [...history, { role: "model", text: "Thinking..." }]), 600);
+        // delay 600 ms before showing the bot's response
+        setTimeout(() => {
+            // Add a "thinking..." placeholder for bot response
+            setChatHistory((history) => [...history, { role: "model", text: "Thinking..." }])
+            
+            // call the function to generate the bot's response
+            generateBotResponse([...chatHistory, { role: "user", text: userMassage }]);
+        
+        }, 600);
+
     };
 
     return (
