@@ -10,6 +10,12 @@ function ChatBot() {
     const [chatHistory, setChatHistory] = useState([]);
 
     const generateBotResponse = async (history) => {
+
+        const updateHistory = (text) => {
+            // Helper function to update chat history with bot's response
+            setChatHistory(prev => [...prev.filter(msg => msg.text !== "Thinking..."), { role: "model", text }]);
+        };
+
         // Remove the "Thinking..." placeholder
         history = history.map(({role, text}) => ({role, parts: [{text}]}));
 
@@ -20,12 +26,19 @@ function ChatBot() {
         }
 
         try {
+            // Make the API call to get bot's response
             const response = await fetch(import.meta.env.VITE_API_URL, requestOptions);
             const data = await response.json();
 
             if(!response.ok) {
                 throw new Error(data.error.message || "Something went wrong!");
             }
+
+            console.log(data);
+
+            // clean and update chat history with bot's response
+            const apiResponseText = data.candidates[0].content.parts[0].text.replace(/\*\*(.*?)\*\*/g, "$1").trim();
+            updateHistory(apiResponseText);
         } catch (error) {
             console.error("Error:", error);
         }
