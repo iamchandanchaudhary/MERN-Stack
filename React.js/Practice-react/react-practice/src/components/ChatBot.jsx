@@ -9,8 +9,26 @@ function ChatBot() {
 
     const [chatHistory, setChatHistory] = useState([]);
 
-    const generateBotResponse = (history) => {
-        console.log(history);
+    const generateBotResponse = async (history) => {
+        // Remove the "Thinking..." placeholder
+        history = history.map(({role, text}) => ({role, parts: [{text}]}));
+
+        const requestOptions = {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ contents: history})
+        }
+
+        try {
+            const response = await fetch(import.meta.env.VITE_API_URL, requestOptions);
+            const data = await response.json();
+
+            if(!response.ok) {
+                throw new Error(data.error.message || "Something went wrong!");
+            }
+        } catch (error) {
+            console.error("Error:", error);
+        }
     };
 
     return (
