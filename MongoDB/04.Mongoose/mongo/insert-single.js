@@ -22,7 +22,7 @@ const studentSchema = new mongoose.Schema({
 const Student = mongoose.model("Student", studentSchema);
 // const User = mongoose.model("User", studentSchema);
 
-// Inserting Single Data
+// ==> Inserting Single Data
 const stu1 = new Student({
   name: "Chandan Chaudhary",
   age: 18,

@@ -18,7 +18,7 @@ const studentSchema = new mongoose.Schema({
 
 const Student = mongoose.model("Student", studentSchema);
 
-// => insert many data
+// ==> insert many data
 Student.insertMany([
     {name: "Sneha", age: 17, course: "MBBS"},
     {name: "Safali", age: 21, course: "MBA"},

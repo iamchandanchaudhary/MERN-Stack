@@ -23,3 +23,25 @@ const Person = mongoose.model("Person", personData);
 //     {name: "Sonam Singh", city: "Mumbai", age: 20}
 // ])
 //     .then((data) => console.log(data));
+
+// Person.find({}).then((data) => console.log(data));
+
+// ==> UpdateOne
+// Person.updateOne({name: "Nikhil Pandey"}, {name: "Nikhil Yadav"}).then((res) => console.log(res));
+// Person.updateOne({name: "Abhisekh Sharma"}, {age: 24}).then((res) => console.log(res));
+
+
+// // ==> UpdateMany
+// Person.updateMany({age: {$gte: 20}}, {age: 25}).then((res) => console.log(res));
+
+// Person.find({}).then((data) => console.log(data));
+
+// ==> findAndUpdate
+// Person.findOneAndUpdate({name: "Sonam Singh"}, {city: "Delhi"}).then((res) => console.log(res)); // first find and then Update
+
+// Person.findOneAndUpdate({name: "Sonam Singh"}, {age: 29}, {new: true}).then((res) => console.log(res));  // return the modified document rather then the original
+
+// Person.find({}).then((data) => console.log(data));
+
+// ==> findByIdAndUpdate
+Person.findByIdAndUpdate("67d01d517cdadbd24c36ef9b", {age: 31}, {new: true}).then((res) => console.log(res));
