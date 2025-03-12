@@ -34,5 +34,11 @@ Employee.deleteOne({age: 23}).then((res) => console.log(res));
 
 Employee.find({}).then((data) => console.log(data));
 
-// ==> deleteMany
+// // ==> deleteMany
 Employee.deleteMany({age: {$gte: 22}}).then((res) => console.log(res));
+
+// ==> find & Delete
+Employee.findOneAndDelete({name: "Alok Maurya"}).then((data) => console.log(data));  // delete but also shows the deleted value
+Employee.findByIdAndDelete('67d1865ff1523d72d5bdcc4a').then((data) => console.log(data));  // delete but also shows the deleted value
+
+Employee.find({}).then((data) => console.log(data));
