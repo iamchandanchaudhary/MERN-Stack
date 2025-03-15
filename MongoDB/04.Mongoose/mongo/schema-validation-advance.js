@@ -12,7 +12,7 @@ async function main() {
 const bookSchama = new mongoose.Schema({
     title: {
         type: String,
-        required: true,
+        required: true,  // Must be present 
         maxLength: 20,
     },
 
@@ -22,25 +22,25 @@ const bookSchama = new mongoose.Schema({
 
     description: {
         type: String,
-        lowercase: true,
+        lowercase: true, // Automatic change description to lowercase
     },
 
     price: {
         type: Number,
-        min: [1, "Please enter valid price"],
+        min: [1, "Please enter valid price"], // Custom Errors
     },
 
     discount: {
         type: Number,
-        default: 0,
+        default: 0, // by default value
     },
 
     category: {
         type: String,
-        enum: ["fiction", "non-fiction"],
+        enum: ["fiction", "non-fiction"], // Only two option
     },
 
-    genere: [String],
+    genere: [String], // can store multiple data in the form of array
 });
 
 const Book = mongoose.model("Book", bookSchama);
@@ -56,16 +56,26 @@ Book.insertMany([
     // {title: "Marvel Comics", author: "Stan Lee", description: "The Marvel chenematic universe", price: 700, discount: 50, category: "fiction", genere: ["comics", "superheros", "fiction"]},
 
 ])
-    .then((data) => console.log(data))
-    .catch((err) => console.log(err));
+    // .then((data) => console.log(data))
+    // .catch((err) => console.log(err));
 
 // Book.find({}).then((data) => console.log(data));
 
 // ==> Update validation
-Book.findOneAndUpdate({title: "Mathematics X"}, {price: -650}).then((data) => console.log(data)); // Updation will be perform without validation
+// Book.findOneAndUpdate(
+//      {title: "Mathematics X"}, 
+//      {price: -650})
+//      .then((data) => console.log(data)
+// ); // Updation will be perform without validation
 
-Book.findOneAndUpdate({title: "Mathematics X"}, {price: -520}, {runValidators: true}).then((data) => console.log(data)); // Updation can be perform by on the basis of Schema validation
+Book.findOneAndUpdate(
+    {title: "Mathematics X"}, 
+    {price: -520}, 
+    {runValidators: true})
+    .then((data) => console.log(data))
+    .catch((err) => console.log(err.errors.price.properties)
+); // Updation can be perform by on the basis of Schema validation
 
-Book.findOneAndUpdate({title: "Mathematics X"}, {price: 950}).then((data) => console.log(data)); // Updation will be perform without validation
+// Book.findOneAndUpdate({title: "Mathematics X"}, {price: 950}).then((data) => console.log(data));
 
-Book.find({}).then((data) => console.log(data));
+// Book.find({}).then((data) => console.log(data));
