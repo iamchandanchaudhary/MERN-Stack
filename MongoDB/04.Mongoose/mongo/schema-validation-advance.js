@@ -8,6 +8,7 @@ async function main() {
     await mongoose.connect("mongodb://127.0.0.1:27017/store");
 }
 
+// ==> Schema Validation (Advance)
 const bookSchama = new mongoose.Schema({
     title: {
         type: String,
@@ -57,5 +58,14 @@ Book.insertMany([
 ])
     .then((data) => console.log(data))
     .catch((err) => console.log(err));
+
+// Book.find({}).then((data) => console.log(data));
+
+// ==> Update validation
+Book.findOneAndUpdate({title: "Mathematics X"}, {price: -650}).then((data) => console.log(data)); // Updation will be perform without validation
+
+Book.findOneAndUpdate({title: "Mathematics X"}, {price: -520}, {runValidators: true}).then((data) => console.log(data)); // Updation can be perform by on the basis of Schema validation
+
+Book.findOneAndUpdate({title: "Mathematics X"}, {price: 950}).then((data) => console.log(data)); // Updation will be perform without validation
 
 Book.find({}).then((data) => console.log(data));
