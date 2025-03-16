@@ -76,6 +76,6 @@ Book.findOneAndUpdate(
     .catch((err) => console.log(err.errors.price.properties)
 ); // Updation can be perform by on the basis of Schema validation
 
-// Book.findOneAndUpdate({title: "Mathematics X"}, {price: 950}).then((data) => console.log(data));
+Book.findOneAndUpdate({title: "Mathematics X"}, {price: 950}).then((data) => console.log(data));
 
 // Book.find({}).then((data) => console.log(data));
