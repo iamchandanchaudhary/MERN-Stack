@@ -1,8 +1,10 @@
 const express = require("express");
 const app = express();
+const path = require("path");
 
 const mongoose = require("mongoose");
-const path = require("path");
+const Chat = require("./models/chat"); // ==> Chat model
+const { time } = require("console");
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
@@ -22,3 +24,9 @@ main()
 async function main() {
     await mongoose.connect("mongodb://127.0.0.1:27017/whatsapp");
 }
+
+// Chat.insertMany([
+//     {from: "Sneha Chaudhary", to: "Neha Chaudhary", msg: "How are you?", created_at: new Date()},
+//     {from: "Chandan Chaudhary", to: "Sheshmani Chaudhary", msg: "Call me", created_at: new Date()},
+// ])
+//     .then((data) => console.log(data));
