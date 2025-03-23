@@ -42,3 +42,6 @@ Employee.findOneAndDelete({name: "Alok Maurya"}).then((data) => console.log(data
 Employee.findByIdAndDelete('67d1865ff1523d72d5bdcc4a').then((data) => console.log(data));  // delete but also shows the deleted value
 
 Employee.find({}).then((data) => console.log(data));
+
+// ==> delete all data from db
+Person.deleteMany({}).then((data) => console.log(data)); 
