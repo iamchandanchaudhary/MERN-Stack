@@ -8,6 +8,9 @@ const Chat = require("./models/chat"); // ==> Chat model
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
+app.use(express.static(path.join(__dirname, "public")));
+app.use(express.urlencoded({ extended: true }));
+
 main()
     .then(() => console.log("Connection Successful"))
     .catch((error) => console.log(error));
@@ -31,6 +34,8 @@ app.get("/", (req, res) => {
 // ])
 //     .then((data) => console.log(data));
 
+// Chat.find({}).then((data) => console.log(data)).catch((err) => console.log(err));
+
 // Index routes 
 app.get("/chats", async(req, res) => {
     let chats = await Chat.find();
@@ -39,4 +44,27 @@ app.get("/chats", async(req, res) => {
     res.render("index.ejs", { chats });
 })
 
-// Chat.find({}).then((data) => console.log(data)).catch((err) => console.log(err));
+
+// New Route
+app.get("/chats/new", (req, res) => {
+    // res.send("Hello Chandan");
+    res.render("newChat.ejs");
+})
+
+// Create route
+app.post("/chats", (req, res) => {
+    let { from, msg, to } = req.body;
+
+    let newChat = new Chat({
+        from: from,
+        msg: msg,
+        to: to,
+        created_at: new Date(),
+    });
+    
+    // console.log(newChat);
+    newChat.save().then((data) => console.log("Chat was saved")).catch((err) => console.log(err));
+    // res.send("working");
+
+    res.redirect("/chats");
+})

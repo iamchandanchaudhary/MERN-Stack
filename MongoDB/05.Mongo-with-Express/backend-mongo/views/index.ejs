@@ -3,22 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>myChat</title>
+    <title>myChat.com</title>
+
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <h1>myChat.com</h1>
     
-    <% for(let chat of chats) { %>
-        <div class="chatbox">
-            <p>From: <%= chat.from %> </p>
+    <form method="GET" action="chats/new">
+        <button class="new-chat">New Chat</button>
+    </form>
 
-            <div class="msg">
-                <p>Massage: <%= chat.msg %> </p>
+    <main class="main-box">
+        <% for(let chat of chats) { %>
+            <div class="chatbox">
+                <p><b>From:</b> <%= chat.from %> </p>
+    
+                <div class="msg">
+                    <p><b>Message:</b> <%= chat.msg %> </p>
+                </div>
+    
+                <p><b>Recived by:</b> <%= chat.to %></p>
+    
+                <hr>
             </div>
-
-            <p>Recived by: <%= chat.to %></p>
-        </div>
-    <% } %>
+        <% } %>
+    </main>
 
 </body>
 </html>

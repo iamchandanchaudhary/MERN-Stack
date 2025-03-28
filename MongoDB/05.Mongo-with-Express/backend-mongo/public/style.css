@@ -1,0 +1,26 @@
+/* * {
+    margin: 0;
+    padding: 0;
+} */
+
+.main-box {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 20px;
+}
+
+.chatbox {
+    background-color: lightyellow;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    padding: 5px 15px;
+
+    width: 300px;
+    border-radius: 16px;
+    box-shadow: 2px 2px 5px black;
+}
+
+.new-chat {
+    margin-bottom: 10px;
+}
