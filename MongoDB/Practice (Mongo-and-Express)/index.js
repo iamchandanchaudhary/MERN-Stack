@@ -1,9 +1,13 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const path = require("path");
 
 const Student = require("./models/student");
 
 const app = express();
+
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "ejs");
 
 app.listen(8080, () => {
     console.log("App was listning on port 8080");
@@ -29,5 +33,12 @@ async function main() {
 //     .then((data) => console.log(data))
 //     .catch((err) => console.log(err));
 
-Student.find({}).then((data) => console.log(data)).catch((err) => console.log(err));
+// Student.find({}).then((data) => console.log(data)).catch((err) => console.log(err));
 // Student.deleteMany({age: {$gt: 15}}).then((data) => console.log(data)).catch((err) => console.log(err));
+
+app.get("/students", async (req, res) => {
+    let Students = await Student.find();
+
+    res.render("college.ejs", { Students });
+    // res.send("working")
+})

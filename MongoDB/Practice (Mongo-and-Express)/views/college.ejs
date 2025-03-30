@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data</title>
+</head>
+<body>
+    <h1>Student Data</h1>
+
+    <% for(let Student of Students) { %>
+        <div>Name: <%= Student.name %> </div>
+        <div>Age: <%= Student.age %> </div>
+        <div>City: <%= Student.city %> </div>
+
+        <hr>
+    <% } %>
+
+</body>
+</html>
