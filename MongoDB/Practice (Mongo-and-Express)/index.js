@@ -27,9 +27,28 @@ async function main() {
     mongoose.connect("mongodb://127.0.0.1:27017/college11");
 }
 
-// creating route
+// index route
 app.get("/students", async(req, res) => {
     let students = await Student.find();
 
     res.render("college.ejs", { students });
+});
+
+// new route
+app.get("/students/new", (req, res) => {
+    res.render("newData.ejs");
+})
+
+// create new data
+app.post("/students", (req, res) => {
+    let { name, age, city } = req.body;
+
+    let newStudent = new Student({
+        name: name,
+        age: age,
+        city: city,
+    });
+
+    newStudent.save().then(() => console.log("Data was saved")).catch((err) => console.log(err));
+    res.redirect("/students");
 })
