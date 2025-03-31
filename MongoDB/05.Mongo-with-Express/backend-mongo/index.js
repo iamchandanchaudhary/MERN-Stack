@@ -4,12 +4,14 @@ const path = require("path");
 
 const mongoose = require("mongoose");
 const Chat = require("./models/chat"); // ==> Chat model
+const methodOverride = require("method-override");
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: true }));
+app.use(methodOverride("_method"));
 
 main()
     .then(() => console.log("Connection Successful"))
@@ -42,14 +44,14 @@ app.get("/chats", async(req, res) => {
     console.log(chats);
     // res.send("Working");
     res.render("index.ejs", { chats });
-})
+});
 
 
 // New Route
 app.get("/chats/new", (req, res) => {
     // res.send("Hello Chandan");
     res.render("newChat.ejs");
-})
+});
 
 // Create route
 app.post("/chats", (req, res) => {
@@ -67,7 +69,7 @@ app.post("/chats", (req, res) => {
     // res.send("working");
 
     res.redirect("/chats");
-})
+});
 
 // edit route
 app.get("/chats/:id/edit", async (req, res) => {
@@ -75,4 +77,17 @@ app.get("/chats/:id/edit", async (req, res) => {
     let chat = await Chat.findById(id);
 
     res.render("editChat.ejs", { chat });
+});
+
+// update route
+app.put("/chats/:id", async (req, res) => {
+    let { id } = req.params;
+    let { msg: newMsg } = req.body;
+
+    let updatedMsg = await Chat.findByIdAndUpdate(id, 
+        {msg: newMsg},
+        { runValidators: true, new: true },
+    );
+
+    res.redirect("/chats");
 })
