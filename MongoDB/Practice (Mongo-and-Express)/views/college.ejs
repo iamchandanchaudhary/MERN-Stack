@@ -6,15 +6,21 @@
     <title>Student Data</title>
 </head>
 <body>
+    
     <h1>Student Data</h1>
 
-    <% for(let Student of Students) { %>
-        <div>Name: <%= Student.name %> </div>
-        <div>Age: <%= Student.age %> </div>
-        <div>City: <%= Student.city %> </div>
+    <% for(let student of students) { %>
+
+        <div>Name: <%= student.name %></div>
+        <div>age: <%= student.age %></div>
+        <div>City: <%= student.city %></div>
 
         <hr>
+
     <% } %>
 
+    <form action="/students/new" method="get">
+        <button type="submit">Create New</button>
+    </form>
 </body>
 </html>
