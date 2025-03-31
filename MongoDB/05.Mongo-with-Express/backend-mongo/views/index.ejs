@@ -28,6 +28,9 @@
                 <p> <%= chat.created_at.toString().split(" ")[4] %> </p>
                 <p> <%= chat.created_at.toString().split(" ").slice(0, 4).join("-") %> </p>
     
+                <form action="/chats/<%= chat._id %>/edit" method="get">
+                    <button type="submit">Edit</button>
+                </form>
                 <hr>
             </div>
         <% } %>
