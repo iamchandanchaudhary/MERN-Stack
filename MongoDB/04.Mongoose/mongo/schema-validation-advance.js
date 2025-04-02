@@ -13,7 +13,8 @@ const bookSchama = new mongoose.Schema({
     title: {
         type: String,
         required: true,  // Must be present 
-        maxLength: 20,
+        maxLength: 20, // maximum length & you can also use Custom error message using array
+        unique: true, // title must be different
     },
 
     author: {
@@ -27,7 +28,7 @@ const bookSchama = new mongoose.Schema({
 
     price: {
         type: Number,
-        min: [1, "Please enter valid price"], // Custom Errors
+        min: [1, "Please enter valid price"], // Custom Errors using error
     },
 
     discount: {
