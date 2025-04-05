@@ -6,8 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["database", "javascript", "backend"],
+  "keywords": [
+    "database",
+    "javascript",
+    "backend"
+  ],
   "author": "Chandan Chaudahry",
   "license": "ISC",
-  "description": "A full stack project"
+  "description": "A full stack project",
+  "dependencies": {
+    "prettier": "^3.5.3"
+  }
 }
