@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import { Route, Routes } from "react-router-dom";
 
 import Home from './components/Home';
 import About from './components/About';
@@ -11,7 +12,16 @@ function App() {
 
   return (
     <>
-      <Home />
+      {/* <Home /> */}
+      <Routes>
+
+        <Route path='/' element={<Home />} />
+        <Route path='/contacts' element={<Contacts />} />
+        <Route path='/services' element={<Services />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/profile' element={<Profile />} />
+
+      </Routes>
     </>
   )
 }
