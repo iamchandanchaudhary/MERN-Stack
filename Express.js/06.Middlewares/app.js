@@ -13,7 +13,8 @@ app.use((req, res, next) => {
 
 app.use((req, res, next) => {
     console.log("Hii, I'm a 2nd middleware.");
-    next();
+    return next(); // after adding return, no any line of code execute after next() [example bellow 👇 dosen't execute]
+    console.log("abc");
 });
 
 app.listen(8080, () => {
