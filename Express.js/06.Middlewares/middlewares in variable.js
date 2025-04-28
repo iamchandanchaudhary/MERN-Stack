@@ -8,23 +8,20 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use("/api", (req, res, next) => {
+// Passing middlewares in variable function
+const checkTocken = ("/api", (req, res, next) => {
     let { token } = req.query;
 
     if(token === "giveaccess") {
         next();
     }
 
-    throw new Error("ACCESS DENIED!!!"); // throwing custom Errors
+    res.send("ACCESS DENIED!!!");
 })
 
-app.get("/api", (req, res) => {
+// using middleware as a authentication check
+app.get("/api", checkTocken, (req, res) => {
     res.send("ACCESS, This is a Secure Data");
-})
-
-// Using error messege 404
-app.use((req, res) => {
-    res.status(404).send("Page not found, Error 404");
 })
 
 app.listen(8080, () => {
