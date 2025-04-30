@@ -6,6 +6,8 @@ function Product( {title, desc, amount, colors, feature } ) {
     let isDiscount = amount > 20;
 
     let styles = {backgroundColor : isDiscount ? "lightpink" : ""}; // ==> Dynanically changing component
+
+    
     return ( // ==> Using Probs
         <div className="component-box" style={styles}>
             <h2>Title: {title}</h2>

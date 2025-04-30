@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "swiper": "^10.0.0"
+  },
+  "devDependencies": {
+    "vite": "^4.0.4"
+  },
+  "license": "MIT",
+  "name": "swiper-react-slides-per-view",
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite",
+    "start": "vite"
+  },
+  "tags": [
+    "swiper"
+  ]
+}
