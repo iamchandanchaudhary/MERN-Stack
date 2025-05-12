@@ -29,9 +29,9 @@ const Student = mongoose.model("Student", studentSchema);
 //     // .catch(() => console.log(err));
 
 // Student.insertMany([
-//     {name: "Nukhil Verma", age: 21, city: "Lucknow", marks: 91},
-//     {name: "Ashok Singh", age: 31, city: "Barabanki", marks: 82},
-//     {name: "Manoj Rajput", age: 25, city: "Ayodhya", marks: 92},
-//     {name: "Akansha Mishra", age: 20, city: "Gonda", marks: 77}
+//     {name: "Abhishekh Sharma", age: 21, city: "Lucknow", marks: 91},
+//     {name: "Naman Dash", age: 31, city: "Barabanki", marks: 82},
+//     {name: "Ajay Singh", age: 25, city: "Ayodhya", marks: 92},
+//     {name: "Sanjay Jaiswal", age: 20, city: "Gonda", marks: 77}
 // ])
 //     .then((data) => console.log(data))
