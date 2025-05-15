@@ -14,7 +14,7 @@ async function main() {
 
 // let allChats = [
 //     {from: "Sneha Chaudhary", to: "Chandan Chaudhary", msg: "How are you?", created_at: new Date()},
-//     {from: "Anshika Verma", to: "Anand Sukla", msg: "Please call me", created_at: new Date()},
+//     {from: "Anshika Patel", to: "Anand Sukla", msg: "Please call me", created_at: new Date()},
 //     {from: "Safali Singh", to: "Nilam Mishra", msg: "Who are you?", created_at: new Date()},
 //     {from: "Jagat Patel", to: "Satish Yadav", msg: "Where are you?", created_at: new Date()},
 //     {from: "Akash Pathak", to: "Divaynsh Singh", msg: "When did you come?", created_at: new Date()},
