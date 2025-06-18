@@ -17,6 +17,13 @@ app.use((req, res, next) => {
     console.log("abc");
 });
 
+// another way of implementing middleware
+const validation = (req, res, next) => {
+    console.log("Hello, I'm validation middleware.");
+    next();
+}
+app.use(validation);
+
 app.listen(8080, () => {
     console.log("App was listning on port: 8080");
 });

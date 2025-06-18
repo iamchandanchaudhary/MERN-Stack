@@ -34,6 +34,8 @@ function App() {
 
       <DestructuredProb fullName="Chandan Chaudhary" />
 
+      <hr />
+
       <CountButton text="Click me" handleClick={handleClick}>
         <h2>{count}</h2>
       </CountButton>
