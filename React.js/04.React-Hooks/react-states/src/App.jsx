@@ -1,6 +1,6 @@
 import './App.css';
 import Counter from './component/Counter';
-import Heart from './component/heart';
+import Heart from './component/Heart';
 import CallBack from './component/CallBack';
 
 function App() {
