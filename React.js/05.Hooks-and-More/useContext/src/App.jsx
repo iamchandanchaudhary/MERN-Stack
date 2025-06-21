@@ -1,7 +1,6 @@
-import { useState } from 'react';
+import { createContext, useState } from 'react';
 import './App.css';
 import ChildA from './Components/ChildA';
-import ChildC from './Components/ChildC';
 
 const UserContext = createContext();
 
@@ -12,9 +11,10 @@ function App() {
   return (
     <>
       <UserContext.Provider value={user}>
-        {/* <ChildA /> */}
-        <ChildC />
+        <ChildA />
+        {/* <ChildC /> */}
       </UserContext.Provider>
+      {/* <ChildA value={user} /> */}
     </>
   )
 }
