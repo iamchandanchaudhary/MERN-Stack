@@ -1,15 +1,19 @@
 import React, { useContext } from 'react';
-import { UserContext } from '../App';
-// import UserContextProvider from '../Context/UserContext';
+import { ThemeContext } from '../App';
+// import { UserContext } from '../App';
+// import UserContextProvider, { UserContext } from '../Context/UserContext';
 
 function ChildC() {
 
-    const user = useContext(UserContext);
-    // const user = useContext(UserContextProvider);
+    // const user = useContext(UserContext);
+    // const {user} = useContext(UserContext);
+
+    const theme = useContext(ThemeContext);
 
   return (
     <div>
-      {user.name}
+      {/* {user.name} */}
+      {theme}
     </div>
   )
 }

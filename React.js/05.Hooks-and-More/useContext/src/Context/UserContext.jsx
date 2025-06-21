@@ -1,16 +1,23 @@
 import React, { createContext, useState } from 'react';
+import App from '../App';
 
-export const userContext = createContext();
+const UserContext = createContext();
 
-export default function UserContextProvider(probs) {
+export default function UserContextProvider() {
 
     const [user, setUser] = useState({name:"Chandan"});
 
+    const value = {
+      user
+    }
+
   return (
     <div>
-      <userContext.Provider>
+      <UserContext.Provider value={value}>
         {probs.children}
-      </userContext.Provider>
+      </UserContext.Provider>
     </div>
   )
 }
+
+export {UserContext};
