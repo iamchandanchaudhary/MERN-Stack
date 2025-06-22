@@ -1,7 +1,7 @@
-import { useState } from 'react';
-import './App.css';
 import React from 'react';
+import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+
 import Dashboard from './components/Dashboard';
 import Community from './components/Community';
 import Navbar from './components/Navbar';
@@ -29,9 +29,9 @@ const router = createBrowserRouter(
 function App() {
 
   return (
-    <section className="bg-blue-300 h-screen w-full">
+    <div className="bg-blue-300 h-screen w-full">
         <RouterProvider router={router} />
-    </section>
+    </div>
   )
 }
 

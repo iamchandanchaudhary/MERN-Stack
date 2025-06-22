@@ -1,22 +1,5 @@
-import React from 'react'
+import React from 'react';
 import MainNav from './Navbar';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Dashboard from './Dashboard';
-import Community from './Community';
-
-const router = createBrowserRouter(
-    [
-        {
-            path: "/dashboard",
-            element: <Dashboard />
-        },
-
-        {
-            path: "/community",
-            element: <Community />
-        }
-    ]
-)
 
 function Home() {
 
