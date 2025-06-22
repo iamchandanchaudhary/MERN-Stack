@@ -2,8 +2,9 @@ import {NavLink} from "react-router-dom";
 import { Link } from 'react-router-dom';
 
 function Navbar() {
+
     return (
-        <section className="flex justify-center items-center w-full h-16 px-10 bg-blue-500 text-[#fff]">
+        <section className="flex justify-between items-center w-full h-16 px-10 bg-blue-500 text-[#fff]">
 
             <div className="flex justify-center items-center gap-5 menu">
                 <NavLink to={"/"} className="menu hover:bg-[#fff] hover:text-[#000] px-3 py-1 rounded-md hover:drop-shadow-md transition-all duration-300 ease-in-out">Home</NavLink>
@@ -12,6 +13,9 @@ function Navbar() {
                 <NavLink to={"/about"} className="menu hover:bg-[#fff] hover:text-[#000] px-3 py-1 rounded-md hover:drop-shadow-md transition-all duration-300 ease-in-out">About</NavLink>
                 <NavLink to={"/profile"} className="menu hover:bg-[#fff] hover:text-[#000] px-3 py-1 rounded-md hover:drop-shadow-md transition-all duration-300 ease-in-out">Profile</NavLink>
             </div>
+
+            <Link to={"/key/:id"} className="menu hover:bg-[#fff] hover:text-[#000] px-3 py-1 rounded-md hover:drop-shadow-md transition-all duration-300 ease-in-out">useParams</Link>
+
         </section>
     );
 }
