@@ -1,31 +1,37 @@
 import { useState } from 'react';
 import './App.css';
-import { Route, Routes } from "react-router-dom";
-
+import React from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Dashboard from './components/Dashboard';
+import Community from './components/Community';
+import Navbar from './components/Navbar';
 import Home from './components/Home';
-import About from './components/About';
-import Services from './components/Services';
-import Contacts from './components/Contacts';
-import Profile from './components/Profile';
-import Main from './AnotherPage/Main';
+
+const router = createBrowserRouter(
+    [
+        {
+            path: "/",
+            element: <Home />
+        },
+
+        {
+            path: "/dashboard",
+            element: <Dashboard />
+        },
+
+        {
+            path: "/community",
+            element: <Community />
+        }
+    ]
+)
 
 function App() {
 
   return (
-    <>
-      {/* <Home /> */}
-      <Routes>
-
-        <Route path='/' element={<Home />} />
-        <Route path='/contacts' element={<Contacts />} />
-        <Route path='/services' element={<Services />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/profile' element={<Profile />} />
-
-        <Route path='/main-page' element={<Main />} />
-
-      </Routes>
-    </>
+    <section className="bg-blue-300 h-screen w-full">
+        <RouterProvider router={router} />
+    </section>
   )
 }
 
