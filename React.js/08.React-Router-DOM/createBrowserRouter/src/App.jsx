@@ -9,6 +9,7 @@ import Home from './components/Home';
 import Courses from './components/NestedComponents/Courses';
 import Test from './components/NestedComponents/Test';
 import Reports from './components/NestedComponents/Reports';
+import NotFound from './components/NotFound';
 
 const router = createBrowserRouter(
     [
@@ -41,6 +42,12 @@ const router = createBrowserRouter(
         {
             path: "/community",
             element: <Community />
+        },
+
+        {
+        // If the page was not found (due to wrong url)
+            path: "*",
+            element: <NotFound />
         }
     ]
 )

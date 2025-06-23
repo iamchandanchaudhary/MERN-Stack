@@ -8,6 +8,7 @@ import Services from './components/Services';
 import Contacts from './components/Contacts';
 import Profile from './components/Profile';
 import PramsComp from './components/PramsComp';
+import NotFound from './components/NotFound';
 
 function App() {
 
@@ -22,6 +23,9 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/profile' element={<Profile />}/>
         <Route path='/key/:id' element={<PramsComp />} />
+
+        {/* If the page was not found (due to wrong url) */}
+        <Route path='*' element={<NotFound />}/>
 
       </Routes>
     </>
