@@ -6,6 +6,9 @@ import Dashboard from './components/Dashboard';
 import Community from './components/Community';
 import Navbar from './components/Navbar';
 import Home from './components/Home';
+import Courses from './components/NestedComponents/Courses';
+import Test from './components/NestedComponents/Test';
+import Reports from './components/NestedComponents/Reports';
 
 const router = createBrowserRouter(
     [
@@ -16,7 +19,23 @@ const router = createBrowserRouter(
 
         {
             path: "/dashboard",
-            element: <Dashboard />
+            element: <Dashboard />,
+
+            // Nested Routes
+            children: [
+                {
+                    path: "courses",
+                    element: <Courses />,
+                }, 
+                {
+                    path: "test",
+                    element: <Test />,
+                }, 
+                {
+                    path: "reports",
+                    element: <Reports />,
+                }
+            ]
         },
 
         {

@@ -1,11 +1,11 @@
 import React from 'react'
-import MainNav from './Navbar';
 import { Link } from 'react-router-dom';
+import Navbar from './Navbar';
 
 function Community() {
   return (
     <section className="bg-blue-300 h-screen w-full">
-        <MainNav />
+        <Navbar />
 
         <div className="text-[#111] m-5">
             <h1 className="text-4xl font-bold">This is a Community Page.</h1>
