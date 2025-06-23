@@ -1,3 +1,8 @@
 .active-link {
     color: black;
 }
+
+.menu.active {
+    color: black;
+    background-color: #fff;
+}
