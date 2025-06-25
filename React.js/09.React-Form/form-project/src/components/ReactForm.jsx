@@ -14,29 +14,31 @@ function ReactForm() {
     let [lastName, setFirstName] = useState("Chaudhary");
     let [password, setPassword] = useState("");
 
-    let handleValue = (event) => {
-        // console.log(event.target.value);
-        setFullName(event.target.value);
-    }
+    // let handleValue = (event) => {
+    //     console.log(event.target.value);
+    //     setFullName(event.target.value);
+    // }
+
+    const onSubmit = (data) => console.log(data);
 
     return (
         <div>
-            <form action="">
+            <form action="" onSubmit={handleSubmit(onSubmit)}>
                 <div>
                     <label>First Name: </label>
-                    <input type="text" placeholder="Enter firstName" value={firstName} onChange={handleValue} {...register("example")} />
+                    <input type="text" placeholder="Enter firstName" {...register("firstName")} />
                 </div>
                 <br />
 
                 <div>
                     <label>Last Name: </label>
-                    <input type="text" placeholder="Enter lastName" value={lastName} onChange={handleValue} {...register("example")} />
+                    <input type="text" placeholder="Enter lastName" {...register("lastName")} />
                 </div>
                 <br />
 
                 <div>
                     <label>Password: </label>
-                    <input type="password" placeholder="Enter password" value={password} onChange={handleValue} {...register("example")} />
+                    <input type="password" placeholder="Enter password" {...register("password")} />
                 </div>
                 <br />
 
