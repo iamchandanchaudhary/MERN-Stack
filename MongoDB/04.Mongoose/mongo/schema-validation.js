@@ -1,12 +1,12 @@
 const mongoose = require("mongoose");
 
-main()
-    .then(() => console.log("Connection Done"))
-    .catch((err) => console.log(err));
-
 async function main() {
     await mongoose.connect("mongodb://localhost:27017/book");
 }
+
+main()
+    .then(() => console.log("Connection Done"))
+    .catch((err) => console.log(err));
 
 // ==> Schema Validation
 const booksData = new mongoose.Schema({

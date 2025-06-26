@@ -2,15 +2,15 @@ const mongoose = require("mongoose");
 
 // mongoose.connect('mongodb://127.0.0.1:27017/college');
 
+async function main() {
+  await mongoose.connect('mongodb://127.0.0.1:27017/college');
+}
+
 main()
     .then(() => {
     console.log("Connection Successeful");
     })
     .catch(err => console.log(err));
-
-async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/college');
-}
 
 const studentSchema = new mongoose.Schema({
   name: String,
