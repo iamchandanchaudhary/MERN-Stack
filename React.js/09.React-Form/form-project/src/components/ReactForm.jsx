@@ -7,7 +7,7 @@ function ReactForm() {
         register,
         handleSubmit,
         watch,
-        formState: { errors },
+        formState: { errors, isSubmitting },
     } = useForm();
 
     // let [firstName, setFullName] = useState("Chandan");
@@ -19,14 +19,21 @@ function ReactForm() {
     //     setFullName(event.target.value);
     // }
 
-    const onSubmit = (data) => console.log(data);
+    const onSubmit = async (data) => {
+        await new Promise((resolve) => setTimeout(resolve, 5000));
+        console.log(data)
+    };
 
     return (
         <div>
             <form action="" onSubmit={handleSubmit(onSubmit)}>
                 <div>
                     <label>First Name: </label>
-                    <input type="text" placeholder="Enter firstName" {...register("firstName", { required: {value: true, message: "required field."}, minLength: {value: 4, message: "min length is 4."}, maxLength: {value: 20, message: "max length is 20."} })} />
+                    <input 
+                    className={`${errors.firstName ? "error-msg" : ""}`}
+                    type="text" 
+                    placeholder="Enter firstName" 
+                    {...register("firstName", { required: {value: true, message: "required field."}, minLength: {value: 4, message: "min length is 4."}, maxLength: {value: 20, message: "max length is 20."} })} />
                     {errors.firstName && <p style={{color: "red"}}>{errors.firstName.message}</p>}
                 </div>
                 <br />
@@ -45,7 +52,7 @@ function ReactForm() {
                 </div>
                 <br />
 
-                <button type="submit">Submit</button>
+                <input type="submit" disabled={isSubmitting} value={isSubmitting ? "Submitting" : "Submit"} />
             </form>
         </div>
     );
