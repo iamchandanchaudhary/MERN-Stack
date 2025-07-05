@@ -47,7 +47,7 @@ app.get("/chats", async(req, res) => {
 });
 
 
-// New Route
+// New Route page
 app.get("/chats/new", (req, res) => {
     // res.send("Hello Chandan");
     res.render("newChat.ejs");
@@ -65,7 +65,8 @@ app.post("/chats", (req, res) => {
     });
     
     // console.log(newChat);
-    newChat.save().then((data) => console.log("Chat was saved")).catch((err) => console.log(err));
+    newChat.save().then((data) => console.log("Chat was saved"))
+                  .catch((err) => console.log(err));
     // res.send("working");
 
     res.redirect("/chats");
