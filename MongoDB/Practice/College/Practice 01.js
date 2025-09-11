@@ -46,3 +46,10 @@
         { name: "Deepanshu" },
         { name: "Deepanshu", age: 22, course: "M.Tech" }
     );
+
+    // ==> Delete
+    // Delete one document
+    db.students.deleteOne({ name: "Ayush" });
+
+    // Delete multiple documents
+    db.students.deleteMany({ age: { $lt: 22 } });
