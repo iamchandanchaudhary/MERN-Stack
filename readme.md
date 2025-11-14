@@ -1,0 +1,2 @@
+## MERN STACK
+This repository includes all the concepts of mern stack following mongoDB, express.js, react.js, node.js. & tailwindcss also included with mern programs. Covers all the concepts using multiple full-stack project.
