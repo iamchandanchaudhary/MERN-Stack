@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Node.js MVC App</title>
+</head>
+<body>
+    <h1>Games List</h1>
+
+    <ul>
+        <% games.forEach(g => { %>
+            <li><%= g.name %> — Rating: <%= g.rating %></li>
+        <% }) %>
+    </ul>
+
+    <h2>Add New Game</h2>
+    <form method="POST" action="/add-game">
+        <input type="text" name="name" placeholder="Game Name" required>
+        <input type="number" name="rating" placeholder="Rating" required>
+        <button type="submit">Add Game</button>
+    </form>
+</body>
+</html>
