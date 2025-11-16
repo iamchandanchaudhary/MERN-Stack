@@ -1,5 +1,4 @@
 // app.js
-
 const math = require("./math");
 
 // Sample inputs
