@@ -4,7 +4,7 @@
 
 - To install react-project: https://react.dev/learn/start-a-new-react-project
 
--  ``npm run start``
+- To start the App: ``npm run start``
 - ``npm run build``
 
 - To install vite-react-project: https://vite.dev/guide/
