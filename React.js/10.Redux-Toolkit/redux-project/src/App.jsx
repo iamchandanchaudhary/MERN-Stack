@@ -1,8 +1,11 @@
 import { useSelector, useDispatch, } from 'react-redux';
 import './App.css';
-import { decrement, increment } from './functions/counter/counterSlice';
+import { decrement, increment, incrementByAmount, reset } from './functions/counter/counterSlice';
+import { useState } from 'react';
 
 const App = () => {
+
+  const [amount, setAmount] = useState(10);
 
   const count = useSelector((state) => state.counter.value);
   const dispatch = useDispatch();
@@ -15,9 +18,13 @@ const App = () => {
     dispatch(decrement());
   }
 
-  // const resetBtn = () => {
-  //   count = 0;
-  // }
+  const handleResetClick = () => {
+    dispatch(reset());
+  }
+
+  const handleAmountClick = () => {
+    dispatch(incrementByAmount(amount))
+  }
 
   return (
     <>
@@ -31,7 +38,13 @@ const App = () => {
             <button onClick={handleDecrementClick} className='bg-gray-900 hover:bg-gray-950 rounded w-10 h-10 flex items-center justify-center'>-</button>
           </div>
 
-          <button onClick={resetBtn} className='bg-gray-900 hover:bg-gray-950 rounded w-full h-8 mt-1 flex items-center justify-center'>Reset</button>
+          <button onClick={handleResetClick} className='bg-gray-900 hover:bg-gray-950 rounded w-full h-8 mt-1 flex items-center justify-center'>Reset</button>
+
+          <p className='mt-3 text-sm'>Increase By Amount</p>
+          <div className='flex border border-gray-900 rounded'>
+            <input type="number" value={amount} placeholder='Enter amount' onChange={(e) => setAmount(e.target.value)} className='bg-gray-900/50 rounded-s p-2 w-32' />
+            <button onClick={handleAmountClick} className='bg-gray-900 hover:bg-gray-950 rounded-e w-10 h-10 flex items-center justify-center'>Add</button>
+          </div>
         </div>
       </div>
     </>
