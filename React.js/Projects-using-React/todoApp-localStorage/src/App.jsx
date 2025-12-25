@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import { TodoContext, TodoProvider } from './Contexts';
 import { v4 as uuid } from 'uuid';
@@ -8,7 +8,7 @@ const App = () => {
   const [todos, setTodos] = useState([]);
 
   const addTodo = (todo) => {
-    setTodos((prev) => [{ id: uuid(), todo }, ...prev])
+    setTodos((prev) => [{ id: uuid(), todo }, ...prev]);
   }
 
   const editTodo = (id, todo) => {
@@ -22,6 +22,18 @@ const App = () => {
   const toggleComplete = (id) => {
     setTodos((prev) => prev.map((prevTodo) => (prevTodo.id === id ? { ...prevTodo, completed: !prevTodo.completed } : prevTodo)));
   }
+
+  useEffect(() => {
+    const todos = JSON.parse(localStorage.getItem("todo"))
+
+    if (todos && todos.length > 0) {
+      setTodos(todos);
+    }
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem("todo", JSON.stringify(todos))
+  }, [todos])
 
   return (
     <TodoProvider value={{ todos, addTodo, editTodo, deleteTodo, toggleComplete }}>
