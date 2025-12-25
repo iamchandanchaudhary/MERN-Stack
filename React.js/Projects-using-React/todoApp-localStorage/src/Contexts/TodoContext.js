@@ -1,15 +1,16 @@
 import { useContext, createContext } from "react";
+// import { v4 as uuid } from 'uuid';
 
 export const TodoContext = createContext({
     todos: [
         {
             id: 1,
-            title: "Todo msg",
-            complete: false
+            todo: "Todo msg",
+            completed: false
         },
     ],
-    addTodo: (title) => {},
-    editTodo: (id, title) => {},
+    addTodo: (todo) => {},
+    editTodo: (id, todo) => {},
     deleteTodo: (id),
     toggleComplete: (id) => {}
 })
