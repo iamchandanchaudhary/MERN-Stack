@@ -42,7 +42,7 @@ const TodoItem = ({ todo }) => {
                     if (todo.completed) return;
 
                     if (isTodoEditable) {
-                        editTodo();
+                        updateTodo();
                     } else setIsTodoEditable((prev) => !prev);
                 }}
                 disabled={todo.completed}>
