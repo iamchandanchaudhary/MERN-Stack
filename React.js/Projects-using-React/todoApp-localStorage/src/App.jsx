@@ -3,7 +3,7 @@ import './App.css';
 import { TodoContext, TodoProvider } from './Contexts';
 import { v4 as uuid } from 'uuid';
 import TodoForm from './Components/TodoForm';
-import TodoItem from './Components/todoItem';
+import TodoItem from './Components/TodoItem';
 
 const App = () => {
 
