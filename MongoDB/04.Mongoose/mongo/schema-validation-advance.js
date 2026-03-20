@@ -57,8 +57,8 @@ Book.insertMany([
     // {title: "Marvel Comics", author: "Stan Lee", description: "The Marvel chenematic universe", price: 700, discount: 50, category: "fiction", genere: ["comics", "superheros", "fiction"]},
 
 ])
-    // .then((data) => console.log(data))
-    // .catch((err) => console.log(err));
+// .then((data) => console.log(data))
+// .catch((err) => console.log(err));
 
 // Book.find({}).then((data) => console.log(data));
 
@@ -70,13 +70,13 @@ Book.insertMany([
 // ); // Updation will be perform without validation
 
 Book.findOneAndUpdate(
-    {title: "Mathematics X"}, 
-    {price: -520}, 
-    {runValidators: true})
+    { title: "Mathematics X" },
+    { price: -520 },
+    { runValidators: true })
     .then((data) => console.log(data))
     .catch((err) => console.log(err.errors.price.properties)
-); // Updation can be perform by on the basis of Schema validation
+    ); // Updation can be perform by on the basis of Schema validation
 
-Book.findOneAndUpdate({title: "Mathematics X"}, {price: 950}).then((data) => console.log(data));
+Book.findOneAndUpdate({ title: "Mathematics X" }, { price: 950 }).then((data) => console.log(data));
 
 // Book.find({}).then((data) => console.log(data));

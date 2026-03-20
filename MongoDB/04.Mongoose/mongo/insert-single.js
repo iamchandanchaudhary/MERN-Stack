@@ -7,10 +7,10 @@ async function main() {
 }
 
 main()
-    .then(() => {
+  .then(() => {
     console.log("Connection Successeful");
-    })
-    .catch(err => console.log(err));
+  })
+  .catch(err => console.log(err));
 
 const studentSchema = new mongoose.Schema({
   name: String,
